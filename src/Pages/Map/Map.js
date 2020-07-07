@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-const Map = () => {
+const Map = (props) => {
   const [map, setMap] = useState(null);
   const [LocationArr, setLocationArr] = useState([]);
   const [num, setNum] = useState(1);
   const [markerArr, setMarkerArr] = useState([]);
+
+  const { inputValue } = props;
 
   const getLocation = async (num) => {
     //위치불러오기 함수
@@ -25,7 +27,7 @@ const Map = () => {
       kakao.maps.load(() => {
         const container = document.getElementById("map"); //맵을 id가 map인 곳에 보여줍니다.
         const options = {
-          center: new kakao.maps.LatLng(37.504498, 127.048907), //센터 좌표
+          center: new kakao.maps.LatLng(37.552672831662136, 127.06917351503958), //센터 좌표
           level: 3, //줌 레벨
         };
         const Map = new kakao.maps.Map(container, options); //맵 생성
@@ -53,18 +55,25 @@ const Map = () => {
       );
     });
     setMarkerArr(extractArr);
+    console.log("HIHIHIHI");
   };
 
   useEffect(() => {
     //컴디마일 때와 비슷
-    createMap();
     getLocation(num);
+    createMap();
   }, []);
 
   useEffect(() => {
     //컴디업과 비슷
     map && LocationArr && createMarker();
   }, [map, LocationArr]);
+
+  useEffect(() => {
+    createMap();
+    createMarker();
+    getLocation(inputValue);
+  }, [inputValue]);
 
   return (
     <>
