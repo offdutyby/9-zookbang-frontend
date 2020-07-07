@@ -1,0 +1,430 @@
+{
+  "filtered": [
+    {
+      "id": 19657,
+      "name": "서울숲아이파크",
+      "sido": "서울특별시",
+      "gugun": "성동구",
+      "dong": "송정동",
+      "bunji": "104",
+      "lat": 37.552672831662136,
+      "lng": 127.06917351503958,
+      "real_type": "아파트",
+      "서비스구분": "입주2년후",
+      "households": 241,
+      "buildDate": 200903,
+      "score": 3.7,
+      "brand": "아이파크",
+      "분양년월": null,
+      "사용승인일": "20090301",
+      "분양년월마커": "미정",
+      "분양년월마커길이lv": 1,
+      "is후분양": false,
+      "image": "https://ic.zigbang.com/vp/BigData/e/e1ab003162673a72aca3782062511ae71a04a80c.jpg?orientation=landscape",
+      "itemCnt": 3,
+      "item_count": {
+        "register": 3,
+        "online": 0
+      },
+      "transactionCnt": 0,
+      "price": {
+        "rent": {
+          "min": 35000,
+          "max": 58500,
+          "avg": 49000,
+          "perArea": 1426
+        },
+        "sales": {
+          "min": 64000,
+          "max": 93000,
+          "avg": 81000,
+          "perArea": 2346
+        },
+        "offer": {
+          "min": null,
+          "max": null,
+          "avg": null,
+          "perArea": null
+        }
+      },
+      "floorArea": {
+        "m2": 84,
+        "p": 25
+      },
+      "isLargestRoomType": false,
+      "marker": {
+        "base": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        },
+        "webbase": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        },
+        "selected": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        },
+        "focus": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        }
+      }
+    },
+    {
+      "id": 18278,
+      "name": "호동",
+      "sido": "서울특별시",
+      "gugun": "광진구",
+      "dong": "군자동",
+      "bunji": "343-12",
+      "lat": 37.55137455130681,
+      "lng": 127.07059822159314,
+      "real_type": "아파트",
+      "서비스구분": "입주2년후",
+      "households": 36,
+      "buildDate": 200210,
+      "score": 0,
+      "brand": "",
+      "분양년월": null,
+      "사용승인일": "20021001",
+      "분양년월마커": "미정",
+      "분양년월마커길이lv": 1,
+      "is후분양": false,
+      "image": "https://ic.zigbang.com/vp/area/danji/18278-12456d06a50a4ba69e1e22eb8fa15428_r.jpg?orientation=landscape",
+      "itemCnt": 0,
+      "item_count": {
+        "register": 0,
+        "online": 0
+      },
+      "transactionCnt": 0,
+      "price": {
+        "rent": {
+          "min": 30000,
+          "max": 33000,
+          "avg": 32500,
+          "perArea": 1142
+        },
+        "sales": {
+          "min": 40000,
+          "max": 44000,
+          "avg": 43000,
+          "perArea": 1519
+        },
+        "offer": {
+          "min": null,
+          "max": null,
+          "avg": null,
+          "perArea": null
+        }
+      },
+      "floorArea": {
+        "m2": 79,
+        "p": 24
+      },
+      "isLargestRoomType": false,
+      "marker": {
+        "base": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C79%E3%8E%A1%2C%25ED%2598%25B8%25EB%258F%2599&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C24%ED%8F%89%2C%25ED%2598%25B8%25EB%258F%2599&brandName="
+        },
+        "webbase": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C79%E3%8E%A1%2C%25ED%2598%25B8%25EB%258F%2599&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C24%ED%8F%89%2C%25ED%2598%25B8%25EB%258F%2599&brandName="
+        },
+        "selected": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C79%E3%8E%A1%2C%25ED%2598%25B8%25EB%258F%2599&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C24%ED%8F%89%2C%25ED%2598%25B8%25EB%258F%2599&brandName="
+        },
+        "focus": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C79%E3%8E%A1%2C%25ED%2598%25B8%25EB%258F%2599&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C24%ED%8F%89%2C%25ED%2598%25B8%25EB%258F%2599&brandName="
+        }
+      }
+    },
+    {
+      "id": 21410,
+      "name": "광진동양파라곤2단지",
+      "sido": "서울특별시",
+      "gugun": "광진구",
+      "dong": "군자동",
+      "bunji": "358-9",
+      "lat": 37.54847745876516,
+      "lng": 127.06972639884636,
+      "real_type": "아파트",
+      "서비스구분": "입주2년후",
+      "households": 43,
+      "buildDate": 200801,
+      "score": 4,
+      "brand": "",
+      "분양년월": null,
+      "사용승인일": "20080125",
+      "분양년월마커": "미정",
+      "분양년월마커길이lv": 1,
+      "is후분양": false,
+      "image": "https://ic.zigbang.com/vp/area/danji/21410-d0a7547e8b21441899e84b8642a9a7c7_r.jpg?orientation=landscape",
+      "itemCnt": 1,
+      "item_count": {
+        "register": 1,
+        "online": 0
+      },
+      "transactionCnt": 0,
+      "price": {
+        "rent": {
+          "min": 44500,
+          "max": 48000,
+          "avg": 45000,
+          "perArea": 1588
+        },
+        "sales": {
+          "min": 73000,
+          "max": 77500,
+          "avg": 74000,
+          "perArea": 2596
+        },
+        "offer": {
+          "min": null,
+          "max": null,
+          "avg": null,
+          "perArea": null
+        }
+      },
+      "floorArea": {
+        "m2": 89,
+        "p": 27
+      },
+      "isLargestRoomType": false,
+      "marker": {
+        "base": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C89%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C27%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName="
+        },
+        "webbase": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C89%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C27%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName="
+        },
+        "selected": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C89%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C27%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName="
+        },
+        "focus": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C89%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C27%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A42...&brandName="
+        }
+      }
+    },
+    {
+      "id": 15594,
+      "name": "광진동양파라곤1단지",
+      "sido": "서울특별시",
+      "gugun": "광진구",
+      "dong": "군자동",
+      "bunji": "360-20",
+      "lat": 37.54856726618985,
+      "lng": 127.0702198728942,
+      "real_type": "아파트",
+      "서비스구분": "입주2년후",
+      "households": 79,
+      "buildDate": 200802,
+      "score": 4.7,
+      "brand": "",
+      "분양년월": null,
+      "사용승인일": "20080204",
+      "분양년월마커": "미정",
+      "분양년월마커길이lv": 1,
+      "is후분양": false,
+      "image": "https://ic.zigbang.com/vp/area/danji/15594-d24326b6ad4840ed8b257a41d1dc0391_r.jpg?orientation=landscape",
+      "itemCnt": 1,
+      "item_count": {
+        "register": 1,
+        "online": 0
+      },
+      "transactionCnt": 0,
+      "price": {
+        "rent": {
+          "min": 54000,
+          "max": 73000,
+          "avg": 63000,
+          "perArea": 1459
+        },
+        "sales": {
+          "min": 73000,
+          "max": 91500,
+          "avg": 86000,
+          "perArea": 1989
+        },
+        "offer": {
+          "min": null,
+          "max": null,
+          "avg": null,
+          "perArea": null
+        }
+      },
+      "floorArea": {
+        "m2": 102,
+        "p": 31
+      },
+      "isLargestRoomType": false,
+      "marker": {
+        "base": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C102%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C31%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName="
+        },
+        "webbase": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C102%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C31%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName="
+        },
+        "selected": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C102%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C31%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName="
+        },
+        "focus": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C102%E3%8E%A1%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C31%ED%8F%89%2C%25EA%25B4%2591%25EC%25A7%2584%25EB%258F%2599%25EC%2596%2591%25ED%258C%258C%25EB%259D%25BC%25EA%25B3%25A41...&brandName="
+        }
+      }
+    },
+    {
+      "id": 7128,
+      "name": "서원힐탑",
+      "sido": "서울특별시",
+      "gugun": "광진구",
+      "dong": "군자동",
+      "bunji": "100-109",
+      "lat": 37.55216305222373,
+      "lng": 127.07188003129932,
+      "real_type": "아파트",
+      "서비스구분": "입주2년후",
+      "households": 56,
+      "buildDate": 199408,
+      "score": 4.3,
+      "brand": "",
+      "분양년월": null,
+      "사용승인일": "19940801",
+      "분양년월마커": "미정",
+      "분양년월마커길이lv": 1,
+      "is후분양": false,
+      "image": "https://ic.zigbang.com/vp/area/danji/7128-8afb37bcca1a494c948f4abb7f2abae8_r.jpg?orientation=landscape",
+      "itemCnt": 0,
+      "item_count": {
+        "register": 0,
+        "online": 0
+      },
+      "transactionCnt": 0,
+      "price": {
+        "rent": {
+          "min": 16500,
+          "max": 28000,
+          "avg": 22500,
+          "perArea": 812
+        },
+        "sales": {
+          "min": 40500,
+          "max": 65500,
+          "avg": 54500,
+          "perArea": 1974
+        },
+        "offer": {
+          "min": null,
+          "max": null,
+          "avg": null,
+          "perArea": null
+        }
+      },
+      "floorArea": {
+        "m2": 74,
+        "p": 22
+      },
+      "isLargestRoomType": false,
+      "marker": {
+        "base": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C74%E3%8E%A1%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName="
+        },
+        "webbase": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C74%E3%8E%A1%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName="
+        },
+        "selected": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C74%E3%8E%A1%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName="
+        },
+        "focus": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C74%E3%8E%A1%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25EC%2584%259C%25EC%259B%2590%25ED%259E%2590%25ED%2583%2591&brandName="
+        }
+      }
+    },
+    {
+      "id": 10966,
+      "name": "화양브라운스톤",
+      "sido": "서울특별시",
+      "gugun": "광진구",
+      "dong": "화양동",
+      "bunji": "21-2",
+      "lat": 37.547995210246185,
+      "lng": 127.0685535905972,
+      "real_type": "아파트",
+      "서비스구분": "입주2년후",
+      "households": 67,
+      "buildDate": 200610,
+      "score": 4.3,
+      "brand": "",
+      "분양년월": null,
+      "사용승인일": "20061001",
+      "분양년월마커": "미정",
+      "분양년월마커길이lv": 1,
+      "is후분양": false,
+      "image": "https://ic.zigbang.com/vp/area/danji/10966-4335e077fd5e498cba4fef32d3252f7a_r.jpg?orientation=landscape",
+      "itemCnt": 0,
+      "item_count": {
+        "register": 0,
+        "online": 0
+      },
+      "transactionCnt": 0,
+      "price": {
+        "rent": {
+          "min": 34500,
+          "max": 46500,
+          "avg": 40000,
+          "perArea": 1501
+        },
+        "sales": {
+          "min": 56500,
+          "max": 62500,
+          "avg": 59000,
+          "perArea": 2205
+        },
+        "offer": {
+          "min": null,
+          "max": null,
+          "avg": null,
+          "perArea": null
+        }
+      },
+      "floorArea": {
+        "m2": 73,
+        "p": 22
+      },
+      "isLargestRoomType": false,
+      "marker": {
+        "base": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C73%E3%8E%A1%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName="
+        },
+        "webbase": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C73%E3%8E%A1%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName="
+        },
+        "selected": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C73%E3%8E%A1%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName="
+        },
+        "focus": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C73%E3%8E%A1%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName=",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C22%ED%8F%89%2C%25ED%2599%2594%25EC%2596%2591%25EB%25B8%258C%25EB%259D%25BC%25EC%259A%25B4%25EC%258A%25A4%25ED%2586%25A4&brandName="
+        }
+      }
+    }
+  ]
+}

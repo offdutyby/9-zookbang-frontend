@@ -1,0 +1,75 @@
+{
+  "filtered": [
+    {
+      "id": 19657,
+      "name": "서울숲아이파크",
+      "sido": "서울특별시",
+      "gugun": "성동구",
+      "dong": "송정동",
+      "bunji": "104",
+      "lat": 37.552672831662136,
+      "lng": 127.06917351503958,
+      "real_type": "아파트",
+      "서비스구분": "입주2년후",
+      "households": 241,
+      "buildDate": 200903,
+      "score": 3.7,
+      "brand": "아이파크",
+      "분양년월": null,
+      "사용승인일": "20090301",
+      "분양년월마커": "미정",
+      "분양년월마커길이lv": 1,
+      "is후분양": false,
+      "image": "https://ic.zigbang.com/vp/BigData/e/e1ab003162673a72aca3782062511ae71a04a80c.jpg?orientation=landscape",
+      "itemCnt": 3,
+      "item_count": {
+        "register": 3,
+        "online": 0
+      },
+      "transactionCnt": 0,
+      "price": {
+        "rent": {
+          "min": 35000,
+          "max": 58500,
+          "avg": 49000,
+          "perArea": 1426
+        },
+        "sales": {
+          "min": 64000,
+          "max": 93000,
+          "avg": 81000,
+          "perArea": 2346
+        },
+        "offer": {
+          "min": null,
+          "max": null,
+          "avg": null,
+          "perArea": null
+        }
+      },
+      "floorArea": {
+        "m2": 84,
+        "p": 25
+      },
+      "isLargestRoomType": false,
+      "marker": {
+        "base": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        },
+        "webbase": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        },
+        "selected": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Selected&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        },
+        "focus": {
+          "m2": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C84%E3%8E%A1%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC",
+          "p": "http://api.zigbang.com/v1/marker/apartment.jpg?markerSizeName=xxxh&markerTypeName=New_Apartment_Focus&datas=-%EC%96%B5%2C25%ED%8F%89%2C%25EC%2584%259C%25EC%259A%25B8%25EC%2588%25B2%25EC%2595%2584%25EC%259D%25B4%25ED%258C%258C%25ED%2581%25AC&brandName=%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC"
+        }
+      }
+    }
+  ]
+}
