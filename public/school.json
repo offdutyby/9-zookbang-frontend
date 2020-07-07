@@ -1,0 +1,48 @@
+{
+  "school": [
+    {
+      "name": "서울반원초등학교",
+      "lat": 37.5100296302961,
+      "lng": 127.004053605291,
+      "stage": "elementary",
+      "sullib": "public",
+      "high_category": null,
+      "gender": "both",
+      "gugun": "서초구",
+      "address": "서울특별시 서초구 잠원동 1-3번지"
+    },
+    {
+      "name": "서초고등학교",
+      "lat": 37.4893167813345,
+      "lng": 127.006037414404,
+      "stage": "high",
+      "sullib": "public",
+      "high_category": "일반고등학교",
+      "gender": "both",
+      "gugun": "서초구",
+      "address": "서울특별시 서초구 서초동 1504"
+    },
+    {
+      "name": "경원중학교",
+      "lat": 37.5110633209257,
+      "lng": 127.009313836443,
+      "stage": "middle",
+      "sullib": "public",
+      "high_category": null,
+      "gender": "both",
+      "gugun": "서초구",
+      "address": "서울특별시 서초구 잠원동 66-1"
+    },
+    {
+      "name": "서울신동초등학교",
+      "lat": 37.5168920503817,
+      "lng": 127.011897922087,
+      "stage": "elementary",
+      "sullib": "public",
+      "high_category": "일반고등학교",
+      "gender": "both",
+      "gugun": "서초구",
+      "address": "서울특별시 서초구 잠원동 54-5번지"
+    }
+  ]
+}

@@ -1,22 +1,23 @@
 import React from "react";
 
-export default function List() {
+export default function List(props) {
+  const { searchList } = props;
+
   return (
     <aside
       style={{
         position: "absolute",
-        width: "60px",
+        width: "400px",
         height: "100px",
-        fontSize: "30px",
-        right: "30px",
+        fontSize: "14px",
+        right: "2px",
         top: "30px",
       }}
     >
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
+      {searchList.length &&
+        searchList.map((x) => {
+          return <div>{x["name"]}</div>;
+        })}
     </aside>
   );
 }

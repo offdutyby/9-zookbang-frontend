@@ -3,14 +3,27 @@ import Map from "./Map";
 import List from "./List";
 
 export default function Mapwrap() {
-  const [input, setInput] = useState("");
-  console.log(input);
+  const [clickSearch, setClickSearch] = useState("");
+  const [inputSearch, setInputSearch] = useState("");
+  const [searchList, setSearchList] = useState([]);
 
+  const searchClick = () => {
+    setClickSearch(inputSearch);
+  };
+  const searchValue = (e) => {
+    setInputSearch(e.target.value);
+  };
   return (
     <div>
-      <input onChange={(e) => setInput(e.target.value)} value={input}></input>
-      <Map inputValue={input} />
-      <List />
+      <input onChange={searchValue}></input>
+      <button onClick={searchClick} type="button">
+        검색
+      </button>
+      <Map
+        inputValue={clickSearch}
+        setSearchList={(inp) => setSearchList(inp)}
+      />
+      <List searchList={searchList} />
     </div>
   );
 }
