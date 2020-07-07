@@ -1,0 +1,117 @@
+.container {
+  width: 1200px;
+  height: auto;
+  // display: flex;
+  justify-content: center;
+  margin: auto;
+
+  .containerLoginBoxWrap {
+    border: 1px solid black;
+    width: 378px;
+    height: auto;
+    vertical-align: middle;
+    margin: 0 auto;
+
+    .containerLoginBox {
+      text-align: center;
+      .logoBox {
+        width: 378px;
+        height: 154px;
+        margin-top: 30px;
+        margin-bottom: 22px;
+        // border: 1px solid red;
+
+        .mainLogo {
+          margin-bottom: 10px;
+          width: 120px;
+          height: 48px;
+          // border: 1px solid black;
+        }
+        .logoWithDescriptionBox {
+          width: 260px;
+          height: 100px;
+          margin-right: 60px;
+          margin-left: 60px;
+          // border: 1px solid blue;
+          .descriptionA {
+            width: 260px;
+            height: 40px;
+            font-size: 20px;
+            color: #555555;
+          }
+          .descriptionB {
+            width: 260px;
+            height: 40px;
+            font-size: 22px;
+            font-weight: 700;
+          }
+        }
+      }
+      .inputBox {
+        width: 378px;
+        height: 100px;
+        // border: 1px solid blueviolet;
+        .emailAddressBox {
+          .inputEmaillAddress {
+            height: 45px;
+            // border: 1px solid red;
+            .innerbBox {
+              .box {
+                height: 35px;
+                width: 350px;
+              }
+            }
+          }
+          .inputPassword {
+            .innerBox {
+              .box {
+                height: 35px;
+                width: 350px;
+                // background-color: rebeccapurple;
+                .markBox {
+                  width: 30px;
+                  height: 30px;
+                  background-color: red;
+
+                  .markText {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .loginEmailScreenWrap {
+        height: 38px;
+        width: 378px;
+
+        .btn {
+          width: 110px;
+          .searchForIdButton {
+          }
+          .searchForpwd {
+          }
+          .signup {
+          }
+        }
+      }
+    }
+    .containerStartButton {
+      height: 70px;
+      width: 350px;
+      margin-right: 10px;
+      margin-left: 15px;
+      .startButton {
+        align-items: center;
+        background-color: rgb(250, 149, 11);
+        display: flex;
+        flex: 1 1 0%;
+        height: 50px;
+        justify-content: center;
+        .startText {
+          color: white;
+        }
+      }
+    }
+  }
+}

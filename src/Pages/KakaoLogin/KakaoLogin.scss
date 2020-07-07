@@ -1,0 +1,95 @@
+.main {
+  width: 1200px;
+  .article {
+    width: 1200px;
+    height: 566px;
+    border: 1px solid black;
+    display: flex;
+    .wrapBanner {
+      width: 500px;
+      height: 400px;
+      border: 1px solid red;
+      .infoBanner {
+        .title {
+          .subTitle {
+          }
+        }
+      }
+      .kakaoImg {
+      }
+
+      .wrapForm {
+        width: 500px;
+        height: 500px;
+        border: 1px solid gray;
+        padding: 60px, 70px;
+        .kakaoServiceLogo {
+          margin: 20px;
+          .logoText {
+          }
+        }
+        .loginForm {
+          width: 338px;
+          height: 338px;
+          border: 1px solid blue;
+          .loginEmailField {
+            .inputEmailBox {
+              width: 338px;
+              height: 47px;
+              border: 1px solid red;
+              .inputEmail {
+              }
+              .inputEmailText {
+              }
+            }
+            .inputpwdBox {
+              width: 338px;
+              height: 47px;
+              border: 1px solid red;
+              .inputPwd {
+              }
+              .imputPwdText {
+              }
+            }
+          }
+        }
+        .setLogin {
+          width: 338px;
+          height: 20px;
+          background-color: blue;
+          .itemCheck {
+            .check {
+            }
+            .checkBoxText {
+              .text {
+              }
+            }
+          }
+        }
+        .errorAlert {
+          width: 338px;
+          height: 60px;
+          border: 1px solid brown;
+        }
+        .wrapBtn {
+          width: 338px;
+          height: 148px;
+          .submitBtn {
+            width: 338px;
+            height: 50px;
+            .btnText {
+            }
+          }
+        }
+        .info {
+          .linJoin {
+          }
+          .userList {
+            .linkUser {
+            }
+          }
+        }
+      }
+    }
+  }
+}
