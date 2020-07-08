@@ -61,7 +61,7 @@ const Search = styled.div`
         height: 28px;
         border: none;
         outline: none;
-        background: url(https://s.zigbang.com/www/images/ic_title_searchbar_30x30_nor_white.png)
+        background: url("https://s.zigbang.com/www/images/ic_title_searchbar_30x30_nor_white.png")
           center center / 100% no-repeat transparent;
         background-color: rgb(250, 136, 11);
         cursor: pointer;

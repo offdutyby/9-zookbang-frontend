@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import createSubwayMarker from "./Functions/createSubwayMarker";
 import createSchoolMarker from "./Functions/createSchoolMarker";
+import ZoomController from "./ZoomController";
 
 const Map = ({ inputValue, setSearchList }) => {
   const [map, setMap] = useState(null);
@@ -111,6 +112,7 @@ const Map = ({ inputValue, setSearchList }) => {
 
   return (
     <>
+      <ZoomController map={map} />
       <div
         id="map"
         style={{
