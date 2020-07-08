@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import Map from "./Map";
-import List from "./List";
 
-export default function Mapwrap() {
+import Map from "./Map";
+import AsideBox from "../AsideBox";
+import OfficetelNavBox from "../OfficetelNavBox";
+import SearchBox from "../SearchBox";
+
+const Mapwrap = () => {
   const [clickSearch, setClickSearch] = useState("");
   const [inputSearch, setInputSearch] = useState("");
   const [searchList, setSearchList] = useState([]);
@@ -10,20 +13,22 @@ export default function Mapwrap() {
   const searchClick = () => {
     setClickSearch(inputSearch);
   };
+
   const searchValue = (e) => {
     setInputSearch(e.target.value);
   };
+
   return (
     <div>
-      <input onChange={searchValue}></input>
-      <button onClick={searchClick} type="button">
-        검색
-      </button>
+      <OfficetelNavBox />
+      <SearchBox searchClick={searchClick} searchValue={searchValue} />
       <Map
         inputValue={clickSearch}
         setSearchList={(inp) => setSearchList(inp)}
       />
-      <List searchList={searchList} />
+      <AsideBox searchList={searchList} />
     </div>
   );
-}
+};
+
+export default Mapwrap;
