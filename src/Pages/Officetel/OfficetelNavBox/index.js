@@ -1,3 +1,1 @@
-import OfficetelNavBox from "./OfficetelNavBox";
-
-export default OfficetelNavBox;
+export { default } from "./OfficetelNavBox";

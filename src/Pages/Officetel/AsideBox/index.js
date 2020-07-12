@@ -1,3 +1,1 @@
-import AsideBox from "./AsideBox";
-
-export default AsideBox;
+export { default } from "./AsideBox";

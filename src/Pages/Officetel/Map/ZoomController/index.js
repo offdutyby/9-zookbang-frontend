@@ -1,3 +1,1 @@
-import ZoomController from "./ZoomController";
-
-export default ZoomController;
+export { default } from "./ZoomController";

@@ -38,7 +38,6 @@ export default AsideBox;
 
 const Aside = styled.aside`
   position: absolute;
-  width: 400px;
   height: calc(100% - 122px);
   font-size: 14px;
   border-left: 1px solid rgb(225, 225, 225);
@@ -53,7 +52,7 @@ const Aside = styled.aside`
     height: 56px;
     padding: 0 10px 0 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    .aside-list-count-text {
+    &-text {
       font-size: 18px;
       color: #222222;
     }

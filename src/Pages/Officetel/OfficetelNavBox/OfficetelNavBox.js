@@ -21,8 +21,7 @@ export default OfficetelNavBox;
 const OfficetelNav = styled.div`
   padding: 0 20px 0 32px;
   margin-top: 72px;
-  border-top: 1px solid rgb(225, 225, 225);
-  border-bottom: 1px solid rgb(225, 225, 225);
+  border-top: 1px solid rgb(225, 225, 225) 0;
 `;
 
 const OfficetelNavItem = styled(Link)`

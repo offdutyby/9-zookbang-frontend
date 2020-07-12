@@ -5,9 +5,9 @@ const createSubwayMarker = (subwayArr, map) => {
     new kakao.maps.Size(31, 35)
   );
   subwayArr.map((subway) => {
-    new kakao.maps.Marker({
+    return new kakao.maps.Marker({
       map: map,
-      position: new kakao.maps.LatLng(subway["lat"], subway["lng"]),
+      position: new kakao.maps.LatLng(subway.lat, subway.lng),
     }).setImage(subwayImg);
   });
 };

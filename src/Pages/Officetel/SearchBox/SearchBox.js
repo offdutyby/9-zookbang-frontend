@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import FilterDropDown from "./FilterDropDown";
 
-const SearchBox = ({ searchClick, searchValue }) => {
+const SearchBox = ({
+  searchClick,
+  searchValue,
+  setModalDisplayOn,
+  saleType,
+  setSaleType,
+  depositRange,
+  setDepositRange,
+  priceRange,
+  setPriceRange,
+  structureTypes,
+  setStructureTypes,
+  manageCost,
+  setManageCost,
+  parkingAllow,
+  setParkingAllow,
+}) => {
+  const [typeMouseDown, setTypeMouseDown] = useState("");
+  const [dropDownToggle, setDropDownToggle] = useState(false);
+
   return (
-    <Search>
+    <Search
+      modalMouseDown={typeMouseDown === "모달"}
+      filterMouseDown={typeMouseDown === "필터"}
+    >
       <div className="input-container">
         <div className="input-box">
           <input
@@ -14,18 +37,56 @@ const SearchBox = ({ searchClick, searchValue }) => {
         </div>
       </div>
       <div className="filter-container">
-        <div className="sale-types">
-          <div className="sale-types-text">전체</div>
+        <div
+          className="sale-types"
+          onClick={() => setModalDisplayOn(true)}
+          onMouseDown={() => setTypeMouseDown("모달")}
+          onMouseUp={() => setTypeMouseDown("")}
+          onMouseLeave={() => setTypeMouseDown("")}
+        >
+          <div className="sale-types-text">{saleType}</div>
           <div className="sale-types-img" />
         </div>
-        <div className="filter-box">
+        <div
+          className="filter-box"
+          onClick={() => {
+            setDropDownToggle(true);
+          }}
+          onMouseDown={() => setTypeMouseDown("필터")}
+          onMouseUp={() => setTypeMouseDown("")}
+          onMouseLeave={() => setTypeMouseDown("")}
+        >
           <div className="filter-input">검색 조건을 설정해주세요.</div>
           <div className="filter-btn">
-            <div className="filter-img"></div>
-            <div className="filter-text">필터</div>
+            <div className="filter-btn-img"></div>
+            <div className="filter-btn-text">필터</div>
           </div>
         </div>
       </div>
+      {["전체", "전세", "월세"].map((val, idx) => {
+        return (
+          <FilterDropDown
+            key={idx}
+            val={val}
+            saleType={saleType}
+            setSaleType={setSaleType}
+            depositRange={depositRange}
+            setDepositRange={setDepositRange}
+            typeMouseDown={typeMouseDown}
+            setTypeMouseDown={setTypeMouseDown}
+            priceRange={priceRange}
+            setPriceRange={setPriceRange}
+            structureTypes={structureTypes}
+            setStructureTypes={setStructureTypes}
+            manageCost={manageCost}
+            setManageCost={setManageCost}
+            parkingAllow={parkingAllow}
+            setParkingAllow={setParkingAllow}
+            dropDownToggle={dropDownToggle}
+            setDropDownToggle={setDropDownToggle}
+          />
+        );
+      })}
     </Search>
   );
 };
@@ -33,7 +94,7 @@ const SearchBox = ({ searchClick, searchValue }) => {
 export default SearchBox;
 
 const Search = styled.div`
-  z-index: 2;
+  z-index: 500;
   position: fixed;
   left: 20px;
   top: 141px;
@@ -84,8 +145,10 @@ const Search = styled.div`
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      background-color: ${(props) =>
+        props.modalMouseDown ? "rgba(0,0,0,0.1)" : "white"};
 
-      .sale-types-text {
+      &-text {
         position: relative;
         bottom: -2px;
         color: #222222;
@@ -94,7 +157,7 @@ const Search = styled.div`
         margin-right: 3px;
       }
 
-      .sale-types-img {
+      &-img {
         background-image: url("https://s.zigbang.com/zigbang-www/_next/static/ic_btn_arrow_open_18x18_nor_black-20dd6c412a723f182ebf9d7209b4487d.png");
         background-size: cover;
         width: 18px;
@@ -104,6 +167,8 @@ const Search = styled.div`
     .filter-box {
       display: flex;
       cursor: pointer;
+      background-color: ${(props) =>
+        props.filterMouseDown ? "rgba(0,0,0,0.1)" : "white"};
       .filter-input {
         color: #222222;
         font-size: 13px;
@@ -128,14 +193,14 @@ const Search = styled.div`
         white-space: nowrap;
         border: 1px solid rgb(68, 68, 68);
 
-        .filter-img {
+        &-img {
           background-image: url("https://s.zigbang.com/zigbang-www/_next/static/ic_btn_filter_18x18_nor_black-a5e09876a82fb5417126fcdbad01555c.png");
           background-size: cover;
           width: 20px;
           height: 20px;
           margin-right: 2px;
         }
-        .filter-text {
+        &-text {
           position: relative;
           bottom: -2px;
           display: flex;

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import createSubwayMarker from "./Functions/createSubwayMarker";
 import createSchoolMarker from "./Functions/createSchoolMarker";
 import ZoomController from "./ZoomController";
+import createOverlay from "./Functions/createOverlay";
+import createCluster from "./Functions/createCluster";
+import createMarker from "./Functions/createMarker";
 
 const Map = ({ inputValue, setSearchList }) => {
   const [map, setMap] = useState(null);
@@ -10,6 +14,7 @@ const Map = ({ inputValue, setSearchList }) => {
   const [schoolArr, setSchoolArr] = useState([]);
   const [num, setNum] = useState(1);
   const [markerArr, setMarkerArr] = useState([]);
+  const [overlayArr, setOverlayArr] = useState([]);
   const [clustererObj, setClustererObj] = useState({});
 
   //위치불러오기 함수
@@ -20,20 +25,20 @@ const Map = ({ inputValue, setSearchList }) => {
     setSearchList(dataJSON.filtered); //리스트로 보내줄 데이터
   };
 
-  const getSubway = async () => {
-    const data = await fetch("http://localhost:3000/data/subwayData.json");
-    const dataJSON = await data.json();
-    setSubwayArr(dataJSON.subway);
-  };
-
-  const getSchool = async () => {
-    const data = await fetch("http://localhost:3000/data/schoolData.json");
-    const dataJSON = await data.json();
-    setSchoolArr(dataJSON.school);
+  const getPublic = async () => {
+    const subwayData = await fetch(
+      "http://localhost:3000/data/subwayData.json"
+    );
+    const subwayDataJSON = await subwayData.json();
+    setSubwayArr(subwayDataJSON.subway);
+    const schoolData = await fetch(
+      "http://localhost:3000/data/schoolData.json"
+    );
+    const schoolDataJSON = await schoolData.json();
+    setSchoolArr(schoolDataJSON.school);
   };
 
   const createMap = () => {
-    //맵 생성 함수
     const script = document.createElement("script");
     script.async = true;
     script.src =
@@ -42,52 +47,38 @@ const Map = ({ inputValue, setSearchList }) => {
     script.onload = () => {
       const { kakao } = window;
       kakao.maps.load(() => {
-        const container = document.getElementById("map"); //맵을 id가 map인 곳에 보여줍니다.
+        const container = window.document.getElementById("map"); //맵을 id가 map인 곳에 보여줍니다.
         const options = {
           center: new kakao.maps.LatLng(37.552672831662136, 127.06917351503958), //센터 좌표
           level: 4, //줌 레벨
         };
         const Map = new kakao.maps.Map(container, options); //맵 생성
         setMap(Map);
-
-        kakao.maps.event.addListener(Map, "idle", function () {});
+        kakao.maps.event.addListener(Map, "idle", function () {
+          console.log(Map.getCenter()); //센터값 backend에 줄 자리
+        });
       });
     };
   };
 
-  const createMarker = () => {
-    const { kakao } = window;
-    let extractArr = [];
-    LocationArr.map((_, i) => {
-      extractArr.push(
-        new kakao.maps.Marker({
-          map: map,
-          position: new kakao.maps.LatLng(
-            LocationArr[i].lat,
-            LocationArr[i].lng
-          ),
-        })
-      );
-    });
+  const createMarkers = () => {
+    const extractArr = createMarker(LocationArr, map);
     setMarkerArr(extractArr);
-    createCluster(extractArr);
+    createClusterers(extractArr);
+    createCustomOverlay();
   };
 
-  const createCluster = (markerArr) => {
-    const { kakao } = window;
-    const clusterer = new kakao.maps.MarkerClusterer({
-      map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체
-      averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정
-      minLevel: 5, // 클러스터 할 최소 지도 레벨
-    });
-    clusterer.addMarkers(markerArr);
-    setClustererObj(clusterer);
+  const createClusterers = (markerArr) => {
+    setClustererObj(createCluster(markerArr, map));
+  };
+
+  const createCustomOverlay = () => {
+    setOverlayArr(createOverlay(LocationArr, map));
   };
 
   //컴디마일 때와 비슷
   useEffect(() => {
-    getSubway();
-    getSchool();
+    getPublic();
     getLocation(num);
     createMap();
   }, []);
@@ -104,7 +95,7 @@ const Map = ({ inputValue, setSearchList }) => {
   //컴디업과 비슷
   useEffect(() => {
     if (map && LocationArr.length) {
-      createMarker();
+      createMarkers();
       createSchoolMarker(schoolArr, map);
       createSubwayMarker(subwayArr, map);
     }
@@ -113,17 +104,16 @@ const Map = ({ inputValue, setSearchList }) => {
   return (
     <>
       <ZoomController map={map} />
-      <div
-        id="map"
-        style={{
-          width: "calc(100% - 400px",
-          height: "calc(100% - 122px)",
-          position: "absolute",
-          bottom: "0",
-        }}
-      ></div>
+      <KakaoMap id="map"></KakaoMap>
     </>
   );
 };
 
 export default Map;
+
+const KakaoMap = styled.div`
+  width: calc(100% - 400px);
+  height: calc(100% - 122px);
+  position: absolute;
+  bottom: 0;
+`;

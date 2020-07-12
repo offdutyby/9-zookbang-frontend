@@ -5,9 +5,9 @@ const createSchoolMarker = (schoolArr, map) => {
     new kakao.maps.Size(31, 35)
   );
   schoolArr.map((school) => {
-    new kakao.maps.Marker({
+    return new kakao.maps.Marker({
       map: map,
-      position: new kakao.maps.LatLng(school["lat"], school["lng"]),
+      position: new kakao.maps.LatLng(school.lat, school.lng),
     }).setImage(elementaryImg);
   });
 };
