@@ -119,6 +119,3 @@ render() {
     );
 }
 }
-
-
-export default Login;
