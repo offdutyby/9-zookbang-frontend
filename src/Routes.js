@@ -8,6 +8,7 @@ import {
 import Main from "Pages/Main";
 import Login from "Pages/Login";
 import SignUp from "Pages/SignUp";
+import Officetel from "Pages/Officetel";
 
 class Routes extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class Routes extends React.Component {
           <Route exact path="/" component={Main} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/map" component={Officetel} />
           <Redirect from="*" to="/" />
         </Switch>
       </Router>
