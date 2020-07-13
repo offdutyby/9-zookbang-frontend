@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./KakaoLogin.scss";
+import kakaoLogin from "Images/kakaoLogin/kakaologin.png";
 // import Login from "Pages/Login";
 // 카카오톡 로그인 정보 API 연동
-
+//삭제! api kakaotalk account 에서 제공함!
 class KakaoLogin extends Component {
     state = {
 
@@ -12,13 +13,15 @@ class KakaoLogin extends Component {
         return (
             <div className="main">
                 <div className="article">
-                    <div className="loginBanner">
+                    < div className="loginBanner">
                         <div className="wrapBanner">
                             <div className="infoBanner">
-                                <stong className="title">카카오계정 하나로 충분합니다.</stong>
-                                <p className="subTitle">Kakao의 모든 서비스 뿐 아니라 Melon, Daum등 다른 다양한 서비스까지""이제 카카오계정으로 이용해 보세요!</p>
+                                <p className="title">카카오계정 하나로 충분합니다.</p>
+                                <p className="subTitle">Kakao의 모든 서비스 뿐 아니라 Melon, Daum등 다른 다양한 서비스까지</p>
+                                <p className="subTitle">이제 카카오계정으로 이용해 보세요!</p>
                             </div>
-                            {/* <img src={} alt="카카오이미지" className="kakaoImg"/> */}
+                            <img src={kakaoLogin} alt="카카오이미지" className="kakaoImg"/>
+                        </div>
                         <div className="wrapForm">
                             <h1 className="kakaoServiceLogo">
                                 <span className="logoText">Kakao</span>
@@ -32,7 +35,7 @@ class KakaoLogin extends Component {
 
                                     <div className="inputpwdBox">
                                         <label className="inputPwd" />
-                                        <input className="imputPwdText" datatype="text" placeholder="비밀번호" />
+                                        <input className="inputPwdText" datatype="text" placeholder="비밀번호" />
                                     </div>
                                 </div>
 
@@ -46,17 +49,27 @@ class KakaoLogin extends Component {
                             </div>
                             <div className="errorAlert"></div>
                             <div className="wrapBtn">
-                                <button className="submitBtn" />
-                                 <span className="btnText">로그인</span>
-                                <span className="line">::before<span className="lineOrText">또는</span>::after</span>
-                                <button className="qrLogin" />
-                                 <span className="QR코드 로그인"></span>
+                                <button className="submitBtn" >
+                                 <p className="btnText">로그인</p>
+                                 </button>
+
+                                 <div className="orLineBox">
+                                     <div className="orLine"></div>
+                                     <div className="orText">또는</div>
+                                     <div className="orLineA"></div>
+                                </div>
+                            
+                                 
+                                    
+                                <button className="qrLogin">
+                                 <p className="qrText">QR코드 로그인</p>
+                                </button>
 
                             </div>
                             <div className="info">
                                 <p className="linkJoin">회원가입</p>
                                 <ul className="userList">
-                                    <li className="linkUser">
+                                    <li className="linkUserA">
                                         카카오계정
                                     </li>
                                     <li className="linkUser">
@@ -66,7 +79,7 @@ class KakaoLogin extends Component {
                             </div>
 
                         </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

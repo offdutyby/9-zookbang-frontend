@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 // import { URL_PATH } from "config.js";
-import logo from "../../Images/Login/logo.png";
+import logo from "Images/Login/logo.png";
+import { Link } from "react-router-dom";
 import "./Login.scss";
+
 // import { render } from "node-sass";
 
 class Login extends Component {
@@ -50,7 +52,7 @@ handleButton = () => {
 render() {
     console.log(this.state.email, this.state.password);
     return (
-        <section className="container">
+        <section className="containerLogin">
             <div className="containerLoginBoxWrap">
                 <div className="containerLoginBox">
                     <div className="logoBox">
@@ -76,23 +78,38 @@ render() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="loginEmailScreenWrap">
+                        <div className="loginEmailScreenWrap">
                         <button type="button" className="btn">
-                          <div className="searchForIdButton">아이디찾기</div>
+                          <div className="text">아이디찾기</div>
+                          
                         </button>
+                        <div className="bar">|</div>
                         <button type="button" className="btn">
-                          <div className="searchForpwd">비밀번호찾기</div>
+                          <div className="text">비밀번호찾기</div>
+                          
                         </button>
-                        <button type="button" className="btn">
-                          <div className="signup">회원가입</div>
-                        </button>
+                        <div className="bar">|</div>
+                        <Link to="/SignUp"  className="btnA" >
+                          <div className="text">회원가입</div>
+                        </Link>
                       
                     </div>
+                    </div>
+
                 </div>
                 <div className="containerStartButton">
                 <div className="startButton">
-                    <div className="startText">시작하기</div>
+                    <button 
+                    className="startText"
+                    onClick={this.handleButton}
+                    type="submit">
+                    시작하기
+                    </button>
+                   
+                   
+                      
+                   
+
                 </div>
             </div>
             </div>
