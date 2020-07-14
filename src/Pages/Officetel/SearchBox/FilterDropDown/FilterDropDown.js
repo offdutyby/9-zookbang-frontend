@@ -25,6 +25,17 @@ const FilterDropDown = ({
   setDropDownToggle,
 }) => {
   const [resetRange, setResetRange] = useState(true);
+  const [depositRangeLive, setDepositRangeLive] = useState({
+    전체: [0, 30],
+    전세: [0, 30],
+    월세: [0, 30],
+  });
+  const [priceRangeLive, setPriceRangeLive] = useState({
+    전체: [0, 18],
+    전세: [0, 18],
+    월세: [0, 18],
+  });
+
   return (
     <FilterDropdown typeChange={val === saleType} toggle={dropDownToggle}>
       <div className="dropdown-top">
@@ -37,7 +48,9 @@ const FilterDropDown = ({
           className="dropdown-top-reset"
           onClick={() => {
             setDepositRange({ ...depositRange, [val]: [0, 30] });
+            setDepositRangeLive({ ...depositRangeLive, [val]: [0, 30] });
             setPriceRange({ ...priceRange, [val]: [0, 18] });
+            setPriceRangeLive({ ...priceRangeLive, [val]: [0, 18] });
             setStructureTypes({ ...structureTypes, [val]: ["전체"] });
             setManageCost({ ...manageCost, [val]: false });
             setParkingAllow({ ...ParkingAllow, [val]: false });
@@ -95,13 +108,14 @@ const FilterDropDown = ({
             {saleType === "전세" ? "전세금" : "보증금"}
           </div>
           <div className="deposit-filter">
-            {depositRangeText(depositRange[val])}
+            {depositRangeText(depositRangeLive[val])}
           </div>
           <RangeSlider
             val={val}
-            range={depositRange}
+            range={depositRangeLive}
             max="30"
             setRange={setDepositRange}
+            setRangeLive={setDepositRangeLive}
             pointValue="최소5천만2.5억최대"
             resetRange={resetRange}
           />
@@ -114,13 +128,14 @@ const FilterDropDown = ({
             {`월세${manageCost[val] ? " + 관리비" : ""}`}
           </div>
           <div className="price-range-filter">
-            {priceRangeText(priceRange[val])}
+            {priceRangeText(priceRangeLive[val])}
           </div>
           <RangeSlider
             val={val}
-            range={priceRange}
+            range={priceRangeLive}
             max="18"
             setRange={setPriceRange}
+            setRangeLive={setPriceRangeLive}
             pointValue="최소35만150만최대"
             resetRange={resetRange}
           />

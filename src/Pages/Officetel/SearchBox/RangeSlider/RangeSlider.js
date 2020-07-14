@@ -14,7 +14,15 @@ const RightPosition = (rightValue, leftValue, max) => {
   return 100 - percent + "%";
 };
 
-const RangeSlider = ({ val, range, max, setRange, pointValue, resetRange }) => {
+const RangeSlider = ({
+  val,
+  range,
+  max,
+  setRange,
+  setRangeLive,
+  pointValue,
+  resetRange,
+}) => {
   // const [leftValues, setLeftValues] = useState(0);
   // const [rightValues, setRightValues] = useState(30);
   const [leftRange, setLeftRange] = useState("0%");
@@ -34,6 +42,25 @@ const RangeSlider = ({ val, range, max, setRange, pointValue, resetRange }) => {
           step="1"
           value={range[val][0]}
           className="leftThumb"
+          onMouseUp={(e) => {
+            setRange({
+              ...range,
+              [val]: [
+                Math.round(
+                  (parseInt(
+                    LeftPosition(
+                      parseInt(e.target.value),
+                      parseInt(range[val][1]),
+                      max
+                    )
+                  ) /
+                    100) *
+                    max
+                ),
+                +range[val][1],
+              ],
+            });
+          }}
           onInput={(e) => {
             setLeftRange(
               LeftPosition(
@@ -42,7 +69,7 @@ const RangeSlider = ({ val, range, max, setRange, pointValue, resetRange }) => {
                 max
               )
             );
-            setRange({
+            setRangeLive({
               ...range,
               [val]: [
                 Math.round(
@@ -68,6 +95,26 @@ const RangeSlider = ({ val, range, max, setRange, pointValue, resetRange }) => {
           step="1"
           value={range[val][1]}
           className="rightThumb"
+          onMouseUp={(e) =>
+            setRange({
+              ...range,
+              [val]: [
+                +range[val][0],
+                Math.round(
+                  ((100 -
+                    parseInt(
+                      RightPosition(
+                        parseInt(e.target.value),
+                        parseInt(range[val][0]),
+                        max
+                      )
+                    )) /
+                    100) *
+                    max
+                ),
+              ],
+            })
+          }
           onInput={(e) => {
             setRightRange(
               RightPosition(
@@ -76,7 +123,7 @@ const RangeSlider = ({ val, range, max, setRange, pointValue, resetRange }) => {
                 max
               )
             );
-            setRange({
+            setRangeLive({
               ...range,
               [val]: [
                 +range[val][0],
