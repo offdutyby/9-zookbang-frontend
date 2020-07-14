@@ -7,16 +7,19 @@ const createMarker = (LocationArr, map) => {
     new kakao.maps.Size(39, 49),
     new kakao.maps.Point(-10, 49)
   );
-  LocationArr.map((_, i) => {
+  LocationArr.map((location, idx) => {
     extractArr.push(
       new kakao.maps.Marker({
         map: map,
-        position: new kakao.maps.LatLng(LocationArr[i].lat, LocationArr[i].lng),
+        position: new kakao.maps.LatLng(
+          location[0].longitude,
+          location[0].latitude
+        ),
         image: markerImage,
       })
     );
-    kakao.maps.event.addListener(extractArr[i], "click", function () {
-      map.panTo(extractArr[i].getPosition()); //클릭시 해당 마커의 좌표를 센터로 부드럽게 이동
+    kakao.maps.event.addListener(extractArr[idx], "click", function () {
+      map.panTo(extractArr[idx].getPosition()); //클릭시 해당 마커의 좌표를 센터로 부드럽게 이동
     });
   });
   return extractArr;

@@ -115,7 +115,7 @@ const filterInputText = (
   };
 
   const parkingAllowFunc = () => {
-    return parkingAllow ? "주차가능만" : false;
+    return parkingAllow ? "주차 가능만" : false;
   };
 
   const beforeReturnArr = [
