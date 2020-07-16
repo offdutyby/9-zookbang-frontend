@@ -6,6 +6,7 @@ import ZoomController from "./ZoomController";
 import createOverlay from "./Functions/createOverlay";
 import createCluster from "./Functions/createCluster";
 import createMarker from "./Functions/createMarker";
+import {API_URL} from "../../../config";
 
 const Map = memo(({ inputValue, setSearchList }) => {
   const [map, setMap] = useState(null);
@@ -21,7 +22,7 @@ const Map = memo(({ inputValue, setSearchList }) => {
   //위치불러오기 함수
   const getLocation = async (lng, lat) => {
     const data = await fetch(
-      `http://10.58.4.33:8001/studio-flat/map?longitude=${lat}&latitude=${lng}`
+      `${API_URL}/studio-flat/map?longitude=${lat}&latitude=${lng}`
     );
     const dataJSON = await data.json();
     setLocationArr(dataJSON.result);
@@ -110,7 +111,7 @@ const Map = memo(({ inputValue, setSearchList }) => {
   return (
     <>
       <ZoomController map={map} />
-      <KakaoMap id="map"></KakaoMap>
+      <KakaoMap id="map" />
     </>
   );
 });

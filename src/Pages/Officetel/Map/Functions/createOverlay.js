@@ -1,4 +1,5 @@
 const createOverlay = (LocationArr, map) => {
+
   const { kakao } = window;
   const overlayExtractArr = [];
   LocationArr.map((_, i) => {
