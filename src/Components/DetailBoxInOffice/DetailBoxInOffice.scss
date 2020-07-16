@@ -1,19 +1,21 @@
-.DetailBoxInNav {
+.DetailBoxInOffice {
   position: absolute;
   justify-content: center;
   margin-top: 10px;
-  width: 198px;
-  height: 120px;
+  width: 178px;
+  height: 183px;
+  z-index: 999;
+
   .infoBox {
     position: absolute;
-    width: 198px;
-    height: 120px;
+    width: 178px;
+    height: 183px;
     background-color: white;
     .infoList {
       margin-top: 10px;
       .infoText {
-        width: 196px;
-        height: 34px;
+        width: 176px;
+        height: 32px;
         color: black;
         text-decoration: none;
         border: none;

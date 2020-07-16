@@ -1,0 +1,22 @@
+.SearchBarDetailContainer {
+  width: 725px;
+  height: 210px;
+  margin-top: 56px;
+  position: absolute;
+  background-color: red;
+  z-index: 999;
+  .searchBarDetailBox {
+    .searchbox {
+      width: 725px;
+      height: 40px;
+    }
+  }
+}
+.productShow {
+  width: 725px;
+  height: 210px;
+  background-color: blue;
+}
+.hide {
+  display: none;
+}

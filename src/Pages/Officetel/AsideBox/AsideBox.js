@@ -1,20 +1,20 @@
-import React from "react";
-import styled from "styled-components";
-import AsideItem from "./AsideItems";
+import React from 'react';
+import styled from 'styled-components';
+import AsideItem from './AsideItems';
 
 const AsideBox = ({ searchList }) => {
   return (
     <Aside>
-      <div className="aside-list-count">
-        <div className="aside-list-count-text">지역 목록 305개</div>
-        <div className="aside-list-change-unit"></div>
+      <div className='aside-list-count'>
+        <div className='aside-list-count-text'>지역 목록 305개</div>
+        <div className='aside-list-change-unit'></div>
       </div>
-      <div className="aside-list-box">
-        <div className="recommend-box">
-          <div className="recommend-title">이 지역 안심중개사 추천 매물</div>
-          <div className="recommend-info" />
+      <div className='aside-list-box'>
+        <div className='recommend-box'>
+          <div className='recommend-title'>이 지역 안심중개사 추천 매물</div>
+          <div className='recommend-info' />
         </div>
-        <ul className="aside-list">
+        <ul className='aside-list'>
           {searchList.length &&
             searchList.map((room) => {
               return (
@@ -57,7 +57,7 @@ const Aside = styled.aside`
       color: #222222;
     }
     .aside-list-change-unit {
-      background-image: url("https://s.zigbang.com/zigbang-www/_next/static/ic_unit_change_30x30_nor_black-73e7307155b061dbcf282718af48cd5d.png");
+      background-image: url('https://s.zigbang.com/zigbang-www/_next/static/ic_unit_change_30x30_nor_black-73e7307155b061dbcf282718af48cd5d.png');
       background-size: cover;
       width: 30px;
       height: 30px;
@@ -77,7 +77,7 @@ const Aside = styled.aside`
         color: #222222;
       }
       .recommend-info {
-        background-image: url("https://s.zigbang.com/zigbang-www/_next/static/ic_btn_question_18x18_nor_black-6348238dd4a72b7925b666044a7d411b.png");
+        background-image: url('https://s.zigbang.com/zigbang-www/_next/static/ic_btn_question_18x18_nor_black-6348238dd4a72b7925b666044a7d411b.png');
         background-size: cover;
         width: 18px;
         height: 18px;
@@ -94,7 +94,7 @@ const Aside = styled.aside`
           background-color: rgba(0, 0, 0, 0.1);
         }
         .item-img {
-          background-image: url("https://ic.zigbang.com/ic/items/22415261/1.jpg?w=400&h=300&q=70&a=1");
+          background-image: url('https://ic.zigbang.com/ic/items/22415261/1.jpg?w=400&h=300&q=70&a=1');
           background-size: cover;
           width: 145px;
           height: 112px;

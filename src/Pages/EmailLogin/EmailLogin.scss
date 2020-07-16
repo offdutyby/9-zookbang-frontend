@@ -16,8 +16,8 @@
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     height: 100%;
-    min-height: 455px;
-    max-height: 543px;
+    min-height: 390px;
+    max-height: 490px;
     position: relative;
     box-sizing: border-box;
     padding: 30px 23px 0px;
@@ -28,25 +28,18 @@
       .logoBox {
         width: 332px;
         height: 124px;
-        // margin-top: 30px;
         margin: 0 0 40px;
-        // border: 1px solid red;
         .mainLogo {
-          // margin-bottom: 10px;
           vertical-align: middle;
           width: 120px;
           height: 48px;
           margin: 0 0 20px;
-
-          // border: 1px solid black;
         }
         .logoWithDescriptionBox {
           width: 260px;
           height: 66px;
           margin-right: 10px;
           margin-left: 45px;
-          // padding-top: 10px;
-          // border: 1px solid blue;
           .descriptionA {
             width: 260px;
             height: 33px;
@@ -55,7 +48,6 @@
             text-align: center;
             font-family: SpoqaHanSans;
             color: #555555;
-            // color: rgb(34, 34, 34);
             display: flex;
             -webkit-box-pack: center;
             justify-content: center;
@@ -78,10 +70,7 @@
         background-color: rgba(255, 235, 74, 1);
         display: flex;
         justify-content: center;
-        // padding: 17px px 20px 70px;
         border-radius: 25px;
-        // padding-left: 30px;
-
         .kakaoText {
           font-size: 16px;
           width: 150px;
@@ -93,7 +82,7 @@
           border: none;
           display: flex;
           align-items: center;
-          content: "";
+          content: '';
           outline: none;
           background-color: transparent;
           font-size: 16px;
@@ -107,7 +96,6 @@
     .anotherWay {
       width: 332px;
       height: 80px;
-      //   background-color: pink;
       margin-left: 0 0 20px;
       .anotherWayText {
         font-size: 13px;
@@ -123,13 +111,10 @@
         margin-top: 10px;
         width: 140px;
         height: 56px;
-        // border: 1px solid red;
         justify-content: space-between;
-
         .logoImg {
           width: 36px;
           height: 36px;
-          //   justify-content: space-between;
         }
       }
     }

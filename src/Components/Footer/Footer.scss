@@ -1,19 +1,17 @@
 .containerFooter {
-  // width: 1445px;
-  // height: 500px;
-  // border: 1px solid black;
   width: 100%;
   background-color: rgb(246, 246, 246);
-  padding: 27px 350px 10px 470px;
   color: rgb(153, 153, 153);
-  text-align: center;
+  display: flex;
+  margin-bottom: 30px;
   justify-content: center;
   position: relative;
   .footerWrap {
     width: 600px;
-    // margin-left: 50px;
-
-    // height: 225px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     .textLink {
       width: 600px;
       height: 35px;
@@ -38,14 +36,9 @@
       height: 190px;
       font-size: 12px;
       color: #4c4c4c;
-
-      // margin-top: 35px;
-      // margin-bottom: 55px;
       .copyrightTextBox {
-        // margin: 0 atuo;
         width: 570px;
         padding-right: 55px;
-
         .copyrightText {
           text-align: center;
           line-height: 20px;

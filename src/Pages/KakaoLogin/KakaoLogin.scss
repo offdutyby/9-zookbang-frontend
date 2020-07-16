@@ -3,8 +3,6 @@
   .article {
     width: 1200px;
     height: 566px;
-    // border: 1px solid black;
-
     .loginBanner {
       display: flex;
       margin-left: 70px;
@@ -35,8 +33,6 @@
         height: 570px;
         border: 2px solid #e5e5e5;
         padding: 50px 30px 10px 80px;
-
-        // padding: 60px, 70px;
         .kakaoServiceLogo {
           margin-bottom: 20px;
           .logoText {
@@ -46,7 +42,6 @@
         .loginForm {
           width: 338px;
           height: 110px;
-          // border: 1px solid blue;
           .loginEmailField {
             .inputEmailBox {
               width: 338px;
@@ -93,7 +88,6 @@
         .setLogin {
           width: 338px;
           height: 20px;
-          // background-color: blue;
           .itemCheck {
             .check {
             }
@@ -106,7 +100,6 @@
         .errorAlert {
           width: 338px;
           height: 60px;
-          // border: 1px solid brown;
         }
         .wrapBtn {
           width: 338px;
@@ -126,20 +119,17 @@
             .orLine {
               width: 140px;
               height: 25px;
-              // border-bottom: 1px solid #e5e5e5;
               border-bottom: 3px solid #e5e5e5;
             }
             .orText {
               width: 50px;
               height: 30px;
-              // background-color: #ffe500;
               text-align: center;
               padding-top: 15px;
             }
             .orLineA {
               width: 140px;
               height: 25px;
-              // border-bottom: 1px solid #e5e5e5;
               border-bottom: 3px solid #e5e5e5;
             }
           }
@@ -154,8 +144,6 @@
         }
         .info {
           width: 330px;
-          // height: 50px;
-          // border: 1px solid blue;
           display: flex;
           margin-top: 50px;
           justify-content: space-between;
@@ -171,7 +159,6 @@
             width: 140px;
             justify-content: space-between;
             .linkUser {
-              // width: 40px;
               height: 13px;
               padding-left: 6px;
               border-left: 2px solid #e5e5e5;

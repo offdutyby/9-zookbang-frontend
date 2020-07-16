@@ -1,1 +1,1 @@
-export { default } from "./AsideItem";
+export { default } from './AsideItem';

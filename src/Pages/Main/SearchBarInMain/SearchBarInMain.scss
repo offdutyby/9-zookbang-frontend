@@ -1,15 +1,14 @@
 .searchBarContainer {
   position: absolute;
-  // width: 1440px;
   width: 100%;
   height: 148px;
   z-index: 50;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 0px 40px 250px;
+  display: flex;
+  justify-content: center;
   flex-direction: row;
   text-align: center;
-  // display: flex;
   flex-shrink: 1;
   flex-direction: row;
   align-items: center;
@@ -34,11 +33,11 @@
         .textWrap {
           width: 200px;
           display: flex;
-
           .boldText {
             font-size: 20px;
             font-weight: 700;
             color: #ffffff;
+            cursor: pointer;
             &.click {
               color: orange;
             }
@@ -59,6 +58,7 @@
           .boldText {
             font-size: 20px;
             font-weight: 700;
+            cursor: pointer;
             color: #ffffff;
 
             &.click {
@@ -80,6 +80,7 @@
           .boldText {
             font-size: 20px;
             font-weight: 700;
+            cursor: pointer;
             color: #ffffff;
 
             &.click {
@@ -143,8 +144,8 @@
           border-width: 0px;
           border: none;
           outline: none;
+          position: relative;
         }
-
         .searchBoxText {
           background-color: #ffa409;
           width: 150px;
