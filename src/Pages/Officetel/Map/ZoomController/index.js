@@ -1,1 +1,1 @@
-export { default } from "./ZoomController";
+export { default } from './ZoomController';

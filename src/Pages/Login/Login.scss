@@ -1,0 +1,157 @@
+.containerLogin {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  .containerLoginBoxWrap {
+    border: 1px solid rgb(219, 218, 218);
+    width: 378px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    min-height: 390px;
+    max-height: 490px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px 23px 0px;
+    .containerLoginBox {
+      text-align: center;
+      .logoBox {
+        width: 332px;
+        height: 124px;
+        margin: 0 0 40px;
+        .mainLogo {
+          vertical-align: middle;
+          width: 120px;
+          height: 48px;
+          margin: 0 0 20px;
+        }
+        .logoWithDescriptionBox {
+          width: 260px;
+          height: 66px;
+          margin-right: 10px;
+          margin-left: 45px;
+          .descriptionA {
+            width: 260px;
+            height: 33px;
+            font-size: 22px;
+            font-weight: 300;
+            text-align: center;
+            font-family: SpoqaHanSans;
+            color: #555555;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+          }
+          .descriptionB {
+            width: 260px;
+            height: 40px;
+            font-size: 22px;
+            font-weight: 700;
+          }
+        }
+      }
+      .inputBox {
+        width: 330px;
+        height: 148px;
+        .emailAddressBox {
+          .inputEmaillAddress {
+            height: 43px;
+            margin-bottom: 5px;
+            .innerbBox {
+              .box {
+                height: 35px;
+                width: 100%;
+                border: 1px solid #757575;
+                outline: none;
+              }
+            }
+          }
+          .inputPassword {
+            .innerBox {
+              .box {
+                height: 35px;
+                width: 100%;
+                border: 1px solid #757575;
+                outline: none;
+                .markBox {
+                  width: 30px;
+                  height: 30px;
+                  background-color: red;
+                  .markText {
+                  }
+                }
+              }
+            }
+          }
+        }
+        .loginEmailScreenWrap {
+          height: 20px;
+          width: 300px;
+          display: flex;
+          margin-top: 25px;
+          justify-content: space-between;
+          .bar {
+            color: rgb(219, 218, 218);
+            margin-top: 5px;
+          }
+
+          .btn {
+            width: 30%;
+            text-decoration: none;
+            border: 0;
+            outline: 0;
+            border-color: transparent;
+            background-color: white;
+            .searchForIdButton {
+              background-color: none;
+            }
+            .searchForpwd {
+            }
+            .text {
+              color: #757575;
+              font-size: 12px;
+              margin-left: 3px;
+            }
+          }
+          .btnA {
+            text-decoration: none;
+            .text {
+              color: #757575;
+              margin-top: 5px;
+              margin-left: 10px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .containerStartButton {
+      height: 70px;
+      width: 330px;
+      .startButton {
+        align-items: center;
+        background-color: rgb(250, 149, 11);
+        width: 100%;
+        margin-top: 70px;
+        display: flex;
+        flex: 1 1 0%;
+        height: 50px;
+        justify-content: center;
+        .startText {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 24px;
+          color: white;
+          background: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import createSubwayMarker from "./Functions/createSubwayMarker";
-import createSchoolMarker from "./Functions/createSchoolMarker";
-import ZoomController from "./ZoomController";
-import createOverlay from "./Functions/createOverlay";
-import createCluster from "./Functions/createCluster";
-import createMarker from "./Functions/createMarker";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import createSubwayMarker from './Functions/createSubwayMarker';
+import createSchoolMarker from './Functions/createSchoolMarker';
+import ZoomController from './ZoomController';
+import createOverlay from './Functions/createOverlay';
+import createCluster from './Functions/createCluster';
+import createMarker from './Functions/createMarker';
 
 const Map = ({ inputValue, setSearchList }) => {
   const [map, setMap] = useState(null);
@@ -19,9 +19,7 @@ const Map = ({ inputValue, setSearchList }) => {
 
   //위치불러오기 함수
   const getLocation = async (lng, lat) => {
-    const data = await fetch(
-      `http://10.58.4.33:8000/studio-flat/map?longitude=${lng}&latitude=${lat}`
-    );
+    const data = await fetch(`http://10.58.4.33:8000/studio-flat/map?longitude=${lng}&latitude=${lat}`);
     const dataJSON = await data.json();
     console.log(dataJSON);
     setLocationArr(dataJSON.result);
@@ -29,36 +27,31 @@ const Map = ({ inputValue, setSearchList }) => {
   };
 
   const getPublic = async () => {
-    const subwayData = await fetch(
-      "http://localhost:3000/data/subwayData.json"
-    );
+    const subwayData = await fetch('http://localhost:3000/data/subwayData.json');
     const subwayDataJSON = await subwayData.json();
     setSubwayArr(subwayDataJSON.subway);
-    const schoolData = await fetch(
-      "http://localhost:3000/data/schoolData.json"
-    );
+    const schoolData = await fetch('http://localhost:3000/data/schoolData.json');
     const schoolDataJSON = await schoolData.json();
     setSchoolArr(schoolDataJSON.school);
   };
 
   const createMap = () => {
-    const script = document.createElement("script");
+    const script = document.createElement('script');
     script.async = true;
-    script.src =
-      "https://dapi.kakao.com/v2/maps/sdk.js?appkey=76a449f1dae5315175afe4994035d80d&autoload=false&libraries=clusterer";
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=76a449f1dae5315175afe4994035d80d&autoload=false&libraries=clusterer';
     document.head.appendChild(script);
     script.onload = () => {
       const { kakao } = window;
       kakao.maps.load(() => {
-        const container = window.document.getElementById("map"); //맵을 id가 map인 곳에 보여줍니다.
+        const container = window.document.getElementById('map'); //맵을 id가 map인 곳에 보여줍니다.
         const options = {
           center: new kakao.maps.LatLng(37.512672831662136, 127.06917351503958), //센터 좌표
           level: 7, //줌 레벨
         };
         const Map = new kakao.maps.Map(container, options); //맵 생성
         setMap(Map);
-        kakao.maps.event.addListener(Map, "idle", function () {
-          console.log("clear");
+        kakao.maps.event.addListener(Map, 'idle', function () {
+          console.log('clear');
           markerArr.map((marker) => {
             return marker.setMap(null);
           });
@@ -111,7 +104,7 @@ const Map = ({ inputValue, setSearchList }) => {
   return (
     <>
       <ZoomController map={map} />
-      <KakaoMap id="map"></KakaoMap>
+      <KakaoMap id='map'></KakaoMap>
     </>
   );
 };
