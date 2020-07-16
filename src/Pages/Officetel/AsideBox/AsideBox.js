@@ -15,7 +15,7 @@ const AsideBox = ({ searchList }) => {
           <div className='recommend-info' />
         </div>
         <ul className='aside-list'>
-          {searchList.length &&
+          {/* {searchList.length > 0 &&
             searchList.map((room) => {
               return (
                 <AsideItem
@@ -27,7 +27,7 @@ const AsideBox = ({ searchList }) => {
                   description={room.name}
                 />
               );
-            })}
+            })} */}
         </ul>
       </div>
     </Aside>

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import FilterDropDown from './FilterDropDown';
+import React, { useState } from "react";
+import styled from "styled-components";
+import FilterDropDown from "./FilterDropDown";
+import filterInputTextFunc from "./Functions/filterInputTextFunc";
 
 const SearchBox = ({
   searchClick,
@@ -50,10 +51,27 @@ const SearchBox = ({
           onMouseUp={() => setTypeMouseDown('')}
           onMouseLeave={() => setTypeMouseDown('')}
         >
+<<<<<<< HEAD
           <div className='filter-input'>검색 조건을 설정해주세요.</div>
           <div className='filter-btn'>
             <div className='filter-btn-img'></div>
             <div className='filter-btn-text'>필터</div>
+=======
+          <div className="filter-input">
+            <div>
+              {filterInputTextFunc(
+                depositRange[saleType],
+                priceRange[saleType],
+                manageCost[saleType],
+                structureTypes[saleType],
+                parkingAllow[saleType]
+              )}
+            </div>
+          </div>
+          <div className="filter-btn">
+            <div className="filter-btn-img"></div>
+            <div className="filter-btn-text">필터</div>
+>>>>>>> master
           </div>
         </div>
       </div>
@@ -164,15 +182,18 @@ const Search = styled.div`
         color: #222222;
         font-size: 13px;
         line-height: 19px;
-        padding: 7px 8px 5px 8px;
+        padding: 7px 9px 5px 9px;
         display: flex;
         align-items: center;
         justify-content: center;
         white-space: nowrap;
-        text-overflow: ellipsis;
         width: 193px;
         height: 30px;
         border: 1px solid rgba(0, 0, 0, 0.15);
+        div {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
       }
       .filter-btn {
         width: 60px;

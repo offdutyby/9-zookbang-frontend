@@ -18,11 +18,12 @@ const Map = ({ inputValue, setSearchList }) => {
   const [clustererObj, setClustererObj] = useState({});
 
   //위치불러오기 함수
-  const getLocation = async (num) => {
-    const data = await fetch(`http://localhost:3000/data/mapData${num}.json`);
+  const getLocation = async (lng, lat) => {
+    const data = await fetch(`http://10.58.4.33:8000/studio-flat/map?longitude=${lng}&latitude=${lat}`);
     const dataJSON = await data.json();
-    setLocationArr(dataJSON.filtered);
-    setSearchList(dataJSON.filtered); //리스트로 보내줄 데이터
+    console.log(dataJSON);
+    setLocationArr(dataJSON.result);
+    setSearchList(dataJSON.result); //리스트로 보내줄 데이터
   };
 
   const getPublic = async () => {
@@ -44,13 +45,17 @@ const Map = ({ inputValue, setSearchList }) => {
       kakao.maps.load(() => {
         const container = window.document.getElementById('map'); //맵을 id가 map인 곳에 보여줍니다.
         const options = {
-          center: new kakao.maps.LatLng(37.552672831662136, 127.06917351503958), //센터 좌표
-          level: 4, //줌 레벨
+          center: new kakao.maps.LatLng(37.512672831662136, 127.06917351503958), //센터 좌표
+          level: 7, //줌 레벨
         };
         const Map = new kakao.maps.Map(container, options); //맵 생성
         setMap(Map);
         kakao.maps.event.addListener(Map, 'idle', function () {
-          console.log(Map.getCenter()); //센터값 backend에 줄 자리
+          console.log('clear');
+          markerArr.map((marker) => {
+            return marker.setMap(null);
+          });
+          getLocation(Map.getCenter().Ha, Map.getCenter().Ga);
         });
       });
     };
@@ -58,7 +63,9 @@ const Map = ({ inputValue, setSearchList }) => {
 
   const createMarkers = () => {
     const extractArr = createMarker(LocationArr, map);
+
     setMarkerArr(extractArr);
+
     createClusterers(extractArr);
     createCustomOverlay();
   };
@@ -74,7 +81,6 @@ const Map = ({ inputValue, setSearchList }) => {
   //컴디마일 때와 비슷
   useEffect(() => {
     getPublic();
-    getLocation(num);
     createMap();
   }, []);
 
@@ -84,12 +90,11 @@ const Map = ({ inputValue, setSearchList }) => {
       return marker.setMap(null);
     });
     inputValue && clustererObj.clear();
-    getLocation(inputValue);
   }, [inputValue]); //인풋값 바뀌면
 
   //컴디업과 비슷
   useEffect(() => {
-    if (map && LocationArr.length) {
+    if (map && LocationArr.length > 0) {
       createMarkers();
       createSchoolMarker(schoolArr, map);
       createSubwayMarker(subwayArr, map);
