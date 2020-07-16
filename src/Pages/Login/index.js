@@ -56,7 +56,17 @@ export default class Login extends Component {
               <div className='emailAddressBox'>
                 <div className='inputEmaillAddress'>
                   <div className='innerbBox'>
-                    <input onChange={this.handleInput} value={this.state.email} name='email' type='text' placeholder='이메일주소' className='box' />
+                    <input
+                      onChange={this.handleInput}
+                      style={{
+                        borderColor: this.state.email.length > 5 ? 'rgb(119, 117, 117)' : '',
+                      }}
+                      value={this.state.email}
+                      name='email'
+                      type='text'
+                      placeholder='이메일주소'
+                      className='box'
+                    />
                   </div>
                 </div>
                 <div className='inputPassword'>
@@ -64,6 +74,9 @@ export default class Login extends Component {
                     <input
                       onChange={this.handleInput}
                       value={this.state.password}
+                      style={{
+                        borderColor: this.state.password.length > 5 ? 'rgb(119, 117, 117)' : '',
+                      }}
                       name='password'
                       type='password'
                       placeholder='비밀번호'
@@ -90,9 +103,12 @@ export default class Login extends Component {
           </div>
           <div className='containerStartButton'>
             <div className='startButton'>
-              <button className='startText' onClick={this.handleButton} type='submit'>
-                시작하기
-              </button>
+              <Link to='/main' className='btnB'>
+                {' '}
+                <button className='startText' onClick={this.handleButton} type='submit'>
+                  시작하기
+                </button>
+              </Link>
             </div>
           </div>
         </div>

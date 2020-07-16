@@ -50,10 +50,8 @@ class SignUp extends Component {
 
   handleButton = () => {
     fetch('http://10.58.0.113:8000/account/sign-up', {
-      // fetch 인자의 첫 번째 인자는 api 주소고, 두 번째 인자는 객체 형태이고
       method: 'POST', // 메소드 뒤에 포스트를 스트링으로 적어줘야 하는데, get은 디폴트 값이 원래 있어서 안 써줘도 됨.
       body: JSON.stringify({
-        // body를 json화 시켜서 보내줘야 함. 토큰이 들어오면 json body에 들어옴.
         email: this.state.email,
         password: this.state.password,
       }),
@@ -80,8 +78,8 @@ class SignUp extends Component {
                   type='text'
                   placeholder='이메일주소'
                   onChange={this.handleEmail}
-                  maxlength='50'
-                  autofocus=''
+                  maxLength='50'
+                  autoFocus=''
                   style={{
                     borderColor: this.state.email.length > 5 ? 'rgb(119, 117, 117)' : '',
                   }}

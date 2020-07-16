@@ -23,16 +23,21 @@ class EmailLogin extends Component {
   responseKakao = (res) => {
     window.Kakao.Auth.loginForm({
       success: (res) => {
-        console.log('heheheheh', res.access_token);
-        fetch('http://10.58.5.55:8000/account/kakao', {
+        console.log('Kakao_token: ', res.access_token);
+        fetch('http://10.58.0.113:8000/account/kakao', {
           method: 'GET',
           headers: {
-            'Content-Type': 'application/json',
-            Authorization: res.token,
+            // 'Content-Type': 'application/json',
+            // Authorization: res.token,
+            Authorization: res.access_token,
           },
         })
           .then((res) => res.json())
-          .then((res) => console.log('eheheh', res));
+          .then((res) => {
+            console.log('Back_token', res.access_token);
+            localStorage.setItem('access_token', res.access_token);
+            this.props.history.push('/main');
+          });
       },
     });
   };

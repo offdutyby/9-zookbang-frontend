@@ -10,7 +10,7 @@ class SearchBarInMain extends Component {
     activeArrow: '110px',
     activeText: null,
     activeShow: null,
-    // detailData: [],
+    detailData: [],
     test: '',
   };
 
@@ -28,14 +28,9 @@ class SearchBarInMain extends Component {
 
   // componentDidMount() {
   //   // fetch(DATA_PATH + "detailData.json")
-  //   fetch(
-  //     `${URL_PATH} ${this.props.history.location.pathname.replace(
-  //       "/detail/",
-  //       ""
-  //     )}`
-  //   )
+  //   fetch('http://localhost:3000/data/detailData.json')
   //     .then((res) => res.json())
-  //     .then((res) => this.setState({ detailData: res}));
+  //     .then((res) => this.setState({ detailData: res }));
   // }
   // componentDidMount() {
   //   fetch("http://3.34.141.93:8000/inputsearchbox")
@@ -46,6 +41,19 @@ class SearchBarInMain extends Component {
   //         }),
   //     );
   //    }
+  handleInput = (e) => {
+    fetch(`http://10.58.6.223:8001/search`, {
+      method: 'post',
+      body: JSON.stringify({
+        searchTerm: e.target.value,
+      }),
+    })
+      .then((res) => res.json())
+
+      .then((res) => {
+        this.setState({ detailData: res });
+      });
+  };
 
   changeColor = (num, pos) => {
     this.setState({
@@ -53,12 +61,10 @@ class SearchBarInMain extends Component {
       activeArrow: pos,
     });
   };
-
-  inputHandler = (e) => {
-    this.setState({ activeShow: e.target.value.length });
-  };
+  '';
 
   render() {
+    console.log(this.state.activeShow);
     const { detailData } = this.state;
     return (
       <>
@@ -107,12 +113,12 @@ class SearchBarInMain extends Component {
                 <input
                   className='searchInputBox'
                   type='text'
-                  onChange={this.inputHandler}
+                  onChange={(e) => this.handleInput(e)}
                   placeholder='원하시는 지역명, 지하철역, 오피스텔명을 입력해주세요'
                 />
                 <div className='searchBoxText'>찾아보기</div>
                 {/* {this.inputHandler !== undefined ? <SearchBarDetail/> : null} */}
-                <SearchBarDetail activeShow={this.state.activeShow} />
+                <SearchBarDetail data={detailData} />
               </div>
             </div>
           </div>

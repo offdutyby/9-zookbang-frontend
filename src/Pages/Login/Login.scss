@@ -76,6 +76,7 @@
                 height: 35px;
                 width: 100%;
                 border: 1px solid #757575;
+                outline: none;
                 .markBox {
                   width: 30px;
                   height: 30px;
@@ -147,6 +148,8 @@
           color: white;
           background: transparent;
           border: none;
+          outline: none;
+          cursor: pointer;
         }
       }
     }

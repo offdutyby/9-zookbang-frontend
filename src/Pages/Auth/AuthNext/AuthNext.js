@@ -10,13 +10,19 @@ class Auth extends Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({ phone_number: sessionStorage.getItem('phone_number') });
+  }
+
   handleInput = (e) => {
-    if (e.key === 13) {
-      this.setState({
-        authorization_number: '',
-      });
-    }
+    // if (e.key === 13) {
+    //   this.setState({
+    //     phone_number: '',
+    //     authorization_number: '',
+    //   });
+    // }
     this.setState({
+      // phone_number: '',
       authorization_number: e.target.value,
     });
   };
@@ -59,7 +65,7 @@ class Auth extends Component {
         <div className='authContainer'>
           <div className='authWrap'>
             <div className='authTextBox'>
-              <div className='texta'>010-2516-9400로 전송된</div>
+              <div className='texta'>{this.state.phone_number}로 전송된</div>
               <div className='textb'>4자리 숫자를 입력해주세요.</div>
             </div>
 
@@ -69,7 +75,7 @@ class Auth extends Component {
                 //  type="number"
                 onChange={this.handleInput}
                 name='phonenumber'
-                maxlength='12'
+                maxLength='12'
                 value={this.state.authorization_number}
                 //  name="email"
               />

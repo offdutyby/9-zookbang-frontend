@@ -22,6 +22,9 @@ class Auth extends Component {
   };
 
   handleButton = () => {
+    console.log('hello');
+    sessionStorage.setItem('phone_number', this.state.phone_number);
+
     fetch('http://10.58.0.113:8000/account/phone-auth', {
       method: 'POST',
       headers: {
@@ -42,7 +45,7 @@ class Auth extends Component {
           <div className='authWrap'>
             <div className='authTextBox'>
               <div className='texta'>휴대폰 번호를 입력하시면</div>
-              <div className='textb'>문의 시 더욱 편리하게 연결됩니다.</div>
+              <div className='textc'>문의 시 더욱 편리하게 연결됩니다.</div>
             </div>
 
             <div className='bar'>
