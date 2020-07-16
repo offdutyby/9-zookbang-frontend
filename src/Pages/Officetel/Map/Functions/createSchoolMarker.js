@@ -1,7 +1,7 @@
 const createSchoolMarker = (schoolArr, map) => {
   const { kakao } = window;
   const elementaryImg = new kakao.maps.MarkerImage(
-    'https://apis.zigbang.com/marker/v5/school_item?stage=elementary&select=y&dpi=320',
+    "https://apis.zigbang.com/marker/v5/school_item?stage=elementary&select=y&dpi=320",
     new kakao.maps.Size(31, 35)
   );
   schoolArr.map((school) => {

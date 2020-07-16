@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import Nav from 'Components/Nav';
-import Map from './Map';
-import AsideBox from '../AsideBox';
-import OfficetelNavBox from '../OfficetelNavBox';
-import SearchBox from '../SearchBox';
-import Modalwrapper from '../SearchBox/Modalwrapper';
+import React, { useState } from "react";
+
+import Map from "./Map";
+import AsideBox from "../AsideBox";
+import OfficetelNavBox from "../OfficetelNavBox";
+import SearchBox from "../SearchBox";
+import Modalwrapper from "../SearchBox/Modalwrapper";
 
 const Mapwrap = () => {
-  const [clickSearch, setClickSearch] = useState('');
-  const [inputSearch, setInputSearch] = useState('');
+  const [clickSearch, setClickSearch] = useState("");
+  const [inputSearch, setInputSearch] = useState("");
   const [searchList, setSearchList] = useState([]);
   const [modalDisplayOn, setModalDisplayOn] = useState(false);
   //필터링을 위한 state
-  const [saleType, setSaleType] = useState('전체');
+  const [saleType, setSaleType] = useState("전체");
   const [depositRange, setDepositRange] = useState({
     전체: [0, 30],
     전세: [0, 30],
@@ -29,9 +29,9 @@ const Mapwrap = () => {
     월세: false,
   });
   const [structureTypes, setStructureTypes] = useState({
-    전체: ['전체'],
-    전세: ['전체'],
-    월세: ['전체'],
+    전체: ["전체"],
+    전세: ["전체"],
+    월세: ["전체"],
   });
   const [parkingAllow, setParkingAllow] = useState({
     전체: false,
@@ -49,8 +49,11 @@ const Mapwrap = () => {
 
   return (
     <>
-      <Nav />
-      <Modalwrapper modalDisplayOn={modalDisplayOn} setModalDisplayOn={setModalDisplayOn} setSaleType={setSaleType} />
+      <Modalwrapper
+        modalDisplayOn={modalDisplayOn}
+        setModalDisplayOn={setModalDisplayOn}
+        setSaleType={setSaleType}
+      />
       <OfficetelNavBox />
       <SearchBox
         setModalDisplayOn={setModalDisplayOn}
@@ -69,7 +72,10 @@ const Mapwrap = () => {
         parkingAllow={parkingAllow}
         setParkingAllow={setParkingAllow}
       />
-      <Map inputValue={clickSearch} setSearchList={(inp) => setSearchList(inp)} />
+      <Map
+        inputValue={clickSearch}
+        setSearchList={(inp) => setSearchList(inp)}
+      />
       <AsideBox searchList={searchList} />
     </>
   );

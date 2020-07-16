@@ -1,1 +1,1 @@
-export { default } from './Map/Mapwrap';
+export { default } from "./Map/Mapwrap";
