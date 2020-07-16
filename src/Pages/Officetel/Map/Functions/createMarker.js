@@ -3,17 +3,16 @@ const createMarker = (LocationArr, map) => {
   const extractArr = [];
 
   var markerImage = new kakao.maps.MarkerImage(
-    "https://apis.zigbang.com/marker/v5/officetel?type=none&dpi=320",
+    "https://apis.zigbang.com/marker/v5/officetel?type=normal&dpi=320",
     new kakao.maps.Size(39, 49),
-    new kakao.maps.Point(-10, 49)
   );
   LocationArr.map((location, idx) => {
     extractArr.push(
       new kakao.maps.Marker({
         map: map,
         position: new kakao.maps.LatLng(
-          location[0].longitude,
-          location[0].latitude
+          location.latitude,
+          location.longitude
         ),
         image: markerImage,
       })
