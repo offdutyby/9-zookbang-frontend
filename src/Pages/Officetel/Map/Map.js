@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect , memo} from "react";
 import styled from "styled-components";
 import createSubwayMarker from "./Functions/createSubwayMarker";
 import createSchoolMarker from "./Functions/createSchoolMarker";
@@ -6,8 +6,9 @@ import ZoomController from "./ZoomController";
 import createOverlay from "./Functions/createOverlay";
 import createCluster from "./Functions/createCluster";
 import createMarker from "./Functions/createMarker";
+import {API_URL} from "../../../config";
 
-const Map = ({ inputValue, setSearchList }) => {
+const Map = memo(({ inputValue, setSearchList }) => {
   const [map, setMap] = useState(null);
   const [LocationArr, setLocationArr] = useState([]);
   const [subwayArr, setSubwayArr] = useState([]);
@@ -17,13 +18,13 @@ const Map = ({ inputValue, setSearchList }) => {
   const [overlayArr, setOverlayArr] = useState([]);
   const [clustererObj, setClustererObj] = useState({});
 
+
   //위치불러오기 함수
   const getLocation = async (lng, lat) => {
     const data = await fetch(
-      `http://10.58.4.33:8000/studio-flat/map?longitude=${lng}&latitude=${lat}`
+      `${API_URL}/studio-flat/map?longitude=${lat}&latitude=${lng}`
     );
     const dataJSON = await data.json();
-    console.log(dataJSON);
     setLocationArr(dataJSON.result);
     setSearchList(dataJSON.result); //리스트로 보내줄 데이터
   };
@@ -53,12 +54,11 @@ const Map = ({ inputValue, setSearchList }) => {
         const container = window.document.getElementById("map"); //맵을 id가 map인 곳에 보여줍니다.
         const options = {
           center: new kakao.maps.LatLng(37.512672831662136, 127.06917351503958), //센터 좌표
-          level: 7, //줌 레벨
+          level: 4, //줌 레벨
         };
         const Map = new kakao.maps.Map(container, options); //맵 생성
         setMap(Map);
         kakao.maps.event.addListener(Map, "idle", function () {
-          console.log("clear");
           markerArr.map((marker) => {
             return marker.setMap(null);
           });
@@ -70,9 +70,7 @@ const Map = ({ inputValue, setSearchList }) => {
 
   const createMarkers = () => {
     const extractArr = createMarker(LocationArr, map);
-
     setMarkerArr(extractArr);
-
     createClusterers(extractArr);
     createCustomOverlay();
   };
@@ -107,14 +105,16 @@ const Map = ({ inputValue, setSearchList }) => {
       createSubwayMarker(subwayArr, map);
     }
   }, [map, LocationArr]); //맵과 지역데이터가 받아지면
+  
+  
 
   return (
     <>
       <ZoomController map={map} />
-      <KakaoMap id="map"></KakaoMap>
+      <KakaoMap id="map" />
     </>
   );
-};
+});
 
 export default Map;
 
