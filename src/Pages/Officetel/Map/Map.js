@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import AsideBox from "../AsideBox";
+import ZoomController from "./ZoomController";
+//함수들
 import createSubwayMarker from "./Functions/createSubwayMarker";
 import createSchoolMarker from "./Functions/createSchoolMarker";
-import ZoomController from "./ZoomController";
 import createOverlay from "./Functions/createOverlay";
 import createCluster from "./Functions/createCluster";
 import createMarker from "./Functions/createMarker";
+import filterLocation from "./Functions/Filter";
 
-const Map = ({ inputValue, setSearchList }) => {
+const Map = ({
+  inputValue,
+  setSearchList,
+  saleType,
+  depositRange,
+  priceRange,
+  manageCost,
+  structureTypes,
+  parkingAllow,
+}) => {
   const [map, setMap] = useState(null);
   const [LocationArr, setLocationArr] = useState([]);
   const [subwayArr, setSubwayArr] = useState([]);
@@ -18,14 +30,17 @@ const Map = ({ inputValue, setSearchList }) => {
   const [clustererObj, setClustererObj] = useState({});
 
   //위치불러오기 함수
-  const getLocation = async (lng, lat) => {
+
+  const getLocation = async (lng, lat, saleType, depositRange) => {
     const data = await fetch(
-      `http://10.58.4.33:8000/studio-flat/map?longitude=${lng}&latitude=${lat}`
+      // "http://localhost:3000/data/mapData1.json"
+      `http://10.58.4.33:8000/studio-flat/map?longitude=${lat}&latitude=${lng}`
     );
     const dataJSON = await data.json();
-    console.log(dataJSON);
-    setLocationArr(dataJSON.result);
-    setSearchList(dataJSON.result); //리스트로 보내줄 데이터
+    // setLocationArr(dataJSON.result);
+
+    setLocationArr(filterLocation(dataJSON.result, saleType, depositRange));
+    // setSearchList(dataJSON.result); //리스트로 보내줄 데이터
   };
 
   const getPublic = async () => {
@@ -39,6 +54,22 @@ const Map = ({ inputValue, setSearchList }) => {
     );
     const schoolDataJSON = await schoolData.json();
     setSchoolArr(schoolDataJSON.school);
+  };
+
+  //마커, 클러스터, 오버레이 생성 함수
+  const createMarkers = () => {
+    const extractArr = createMarker(LocationArr, map);
+    setMarkerArr(extractArr);
+    createClusterers(extractArr);
+    createCustomOverlay();
+  };
+
+  const createClusterers = (markerArr) => {
+    setClustererObj(createCluster(markerArr, map));
+  };
+
+  const createCustomOverlay = () => {
+    setOverlayArr(createOverlay(LocationArr, map));
   };
 
   const createMap = () => {
@@ -57,32 +88,21 @@ const Map = ({ inputValue, setSearchList }) => {
         };
         const Map = new kakao.maps.Map(container, options); //맵 생성
         setMap(Map);
-        kakao.maps.event.addListener(Map, "idle", function () {
-          console.log("clear");
-          markerArr.map((marker) => {
-            return marker.setMap(null);
-          });
-          getLocation(Map.getCenter().Ha, Map.getCenter().Ga);
-        });
+        getLocation(
+          Map.getCenter().Ha,
+          Map.getCenter().Ga,
+          saleType,
+          depositRange
+        );
       });
     };
   };
 
-  const createMarkers = () => {
-    const extractArr = createMarker(LocationArr, map);
-
-    setMarkerArr(extractArr);
-
-    createClusterers(extractArr);
-    createCustomOverlay();
-  };
-
-  const createClusterers = (markerArr) => {
-    setClustererObj(createCluster(markerArr, map));
-  };
-
-  const createCustomOverlay = () => {
-    setOverlayArr(createOverlay(LocationArr, map));
+  const eventFunc = () => {
+    markerArr.map((marker) => {
+      return marker.setMap(null);
+    });
+    getLocation(map.getCenter().Ha, map.getCenter().Ga, saleType, depositRange);
   };
 
   //컴디마일 때와 비슷
@@ -90,6 +110,14 @@ const Map = ({ inputValue, setSearchList }) => {
     getPublic();
     createMap();
   }, []);
+
+  useEffect(() => {
+    if (map) {
+      eventFunc();
+      window.kakao.maps.event.removeListener(map, "idle", eventFunc);
+      window.kakao.maps.event.addListener(map, "idle", eventFunc);
+    }
+  }, [saleType, depositRange]);
 
   //검색어 받고 맵과 마커 설정
   useEffect(() => {
@@ -102,6 +130,9 @@ const Map = ({ inputValue, setSearchList }) => {
   //컴디업과 비슷
   useEffect(() => {
     if (map && LocationArr.length > 0) {
+      markerArr.map((marker) => {
+        return marker.setMap(null);
+      });
       createMarkers();
       createSchoolMarker(schoolArr, map);
       createSubwayMarker(subwayArr, map);
@@ -112,6 +143,7 @@ const Map = ({ inputValue, setSearchList }) => {
     <>
       <ZoomController map={map} />
       <KakaoMap id="map"></KakaoMap>
+      <AsideBox LocationArr={LocationArr} />
     </>
   );
 };
@@ -120,7 +152,7 @@ export default Map;
 
 const KakaoMap = styled.div`
   width: calc(100% - 400px);
-  height: calc(100% - 122px);
+  height: calc(100vh - 122px);
   position: absolute;
   bottom: 0;
 `;

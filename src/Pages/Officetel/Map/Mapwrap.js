@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import Map from "./Map";
-import AsideBox from "../AsideBox";
 import OfficetelNavBox from "../OfficetelNavBox";
 import SearchBox from "../SearchBox";
 import Modalwrapper from "../SearchBox/Modalwrapper";
@@ -46,7 +44,6 @@ const Mapwrap = () => {
   const searchValue = (e) => {
     setInputSearch(e.target.value);
   };
-
   return (
     <>
       <Modalwrapper
@@ -75,8 +72,13 @@ const Mapwrap = () => {
       <Map
         inputValue={clickSearch}
         setSearchList={(inp) => setSearchList(inp)}
+        saleType={saleType}
+        depositRange={depositRange}
+        priceRange={priceRange}
+        manageCost={manageCost}
+        structureTypes={structureTypes}
+        parkingAllow={parkingAllow}
       />
-      <AsideBox searchList={searchList} />
     </>
   );
 };

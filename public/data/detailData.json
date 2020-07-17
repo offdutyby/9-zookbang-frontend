@@ -1,0 +1,188 @@
+{
+  "roomDetail": [
+    {
+      "district": "강남구",
+      "province": "삼성동",
+      "longitude": 127.04808807373047,
+      "latitude": 37.50676345825195,
+      "roomImg": [
+        "https://ic.zigbang.com/ic/items/22943534/1.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/2.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/3.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/4.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/5.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/6.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/7.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/8.jpg?w=800&h=600&q=70&a=1",
+        "https://ic.zigbang.com/ic/items/22943534/9.jpg?w=800&h=600&q=70&a=1"
+      ],
+      "roomType": "오피스텔",
+      "subRoomType": "오픈형 원룸",
+      "tradeType": "월세",
+      "deposit": "1,000",
+      "monthlyRent": "105",
+      "registrationNum": 22943534,
+      "supplyAreaM": "66m²",
+      "supplyAreaP": "20평",
+      "exclusiveAreaM": "39m²",
+      "exclusiveAreaP": "12평",
+      "maintenanceFee": 12.0,
+      "description": "전용 12평 넓직하고 구조 좋은 대림아크로텔",
+      "detailDescription": "사업자 가능한 호실과 주거 가능한 호실 있습니다.\n\n상담시 사업자인지 주거인지 말씁해 주세요~\n\n자주식 무료주차\n\n넉넉한 실평수 12평 \n\n선릉공원 산책 3분거리 , 선릉역 3분거리 \n\n\n 20.07.14에 직방에 등록된 매물입니다.",
+      "floor": "중층",
+      "entireFloor": "8층",
+      "isParkingLot": true,
+      "isElevator": true,
+      "moveInDate": "즉시입주",
+      "roomOption": [
+        {
+          "optionName": "에어컨",
+          "iconImg": "https://s.zigbang.com/zuix/ic_aircon_dim_cutline.png"
+        },
+        {
+          "optionName": "냉장고",
+          "iconImg": "https://s.zigbang.com/zuix/ic_refrigerator_dim_cutline.png"
+        },
+        {
+          "optionName": "세탁기",
+          "iconImg": "https://s.zigbang.com/zuix/ic_wash_dim_cutline.png"
+        },
+        {
+          "optionName": "가스레인지",
+          "iconImg": "https://s.zigbang.com/zuix/ic_range_dim_cutline.png"
+        },
+        {
+          "optionName": "옷장",
+          "iconImg": "https://s.zigbang.com/zuix/ic_closet_dim_cutline.png"
+        },
+        {
+          "optionName": "신발장",
+          "iconImg": "https://s.zigbang.com/zuix/ic_shoerack_dim_cutline.png"
+        },
+        {
+          "optionName": "싱크대",
+          "iconImg": "https://s.zigbang.com/zuix/ic_sink_dim_cutline.png"
+        }
+      ],
+      "maintenanceOption": [],
+      "complexName": "선릉대림아크로텔",
+      "complexNumber": 13486,
+      "complexHousehold": 325,
+      "complexBuildDate": "2004. 6",
+      "subway": [
+        "선릉역(2호선,분당선)",
+        "선정릉역(9호선,분당선)",
+        "삼성중앙역(9호선)"
+      ]
+    }
+  ],
+  "agencies": [
+    {
+      "agencyPhoto": "https://ic.zigbang.com/vp/profile/184366.jpg?w=800&h=600&q=70",
+      "agencyName": "플러스공인중개사사무소",
+      "agentComment": "✔ 강남,서초 오피스텔 업무용 사무실 전문 강호진이 드리는 약속 ✔\n\nㅇ 지역, 입주날짜, 금액, 스타일등 말씀하시면 꼭 집어 찾아 드리겠습니다.\n\nㅇ 계약시 꼼꼼한 권리분석으로 확실한 계약으로 마무리 해 드립니다.\n\n카톡ID : kauri76  카톡,전화,문자 언제든 주세요~^^",
+      "agencyRoomList": [
+        {
+          "district": "강남구",
+          "province": "논현동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22813972/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "쓰리룸+",
+          "tradeType": "월세",
+          "deposit": "3,000",
+          "monthlyRent": "280"
+        },
+        {
+          "district": "강남구",
+          "province": "논현동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22743981/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "분리형 원룸",
+          "tradeType": "월세",
+          "deposit": "1,000",
+          "monthlyRent": "120"
+        },
+        {
+          "district": "강남구",
+          "province": "삼성동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22943534/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "오픈형 원룸",
+          "tradeType": "월세",
+          "deposit": "1,000",
+          "monthlyRent": "105"
+        },
+        {
+          "district": "강남구",
+          "province": "삼성동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22889249/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "쓰리룸+",
+          "tradeType": "월세",
+          "deposit": "3,000",
+          "monthlyRent": "260"
+        },
+        {
+          "district": "강남구",
+          "province": "삼성동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22488714/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "오픈형 원룸",
+          "tradeType": "월세",
+          "deposit": "1억",
+          "monthlyRent": "40"
+        },
+        {
+          "district": "강남구",
+          "province": "삼성동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22647363/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "오픈형 원룸",
+          "tradeType": "월세",
+          "deposit": "1,000",
+          "monthlyRent": "115"
+        },
+        {
+          "district": "강남구",
+          "province": "삼성동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22647300/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "오픈형 원룸",
+          "tradeType": "전세",
+          "deposit": "2억",
+          "monthlyRent": null
+        },
+        {
+          "district": "강남구",
+          "province": "삼성동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22814031/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "오픈형 원룸",
+          "tradeType": "월세",
+          "deposit": "1,000",
+          "monthlyRent": "70"
+        },
+        {
+          "district": "강남구",
+          "province": "삼성동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22943505/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "오픈형 원룸",
+          "tradeType": "월세",
+          "deposit": "5,000",
+          "monthlyRent": "55"
+        },
+        {
+          "district": "강남구",
+          "province": "청담동",
+          "thumbnailImg": "https://ic.zigbang.com/ic/items/22744088/1.jpg?w=400&h=300&q=70&a=1",
+          "roomType": "오피스텔",
+          "subRoomType": "복층형 원룸",
+          "tradeType": "전세",
+          "deposit": "9억 5,000",
+          "monthlyRent": null
+        }
+      ]
+    }
+  ]
+}

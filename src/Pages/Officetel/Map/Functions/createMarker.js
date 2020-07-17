@@ -11,10 +11,7 @@ const createMarker = (LocationArr, map) => {
     extractArr.push(
       new kakao.maps.Marker({
         map: map,
-        position: new kakao.maps.LatLng(
-          location[0].longitude,
-          location[0].latitude
-        ),
+        position: new kakao.maps.LatLng(location.latitude, location.longitude),
         image: markerImage,
       })
     );

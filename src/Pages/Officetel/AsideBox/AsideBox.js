@@ -1,12 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AsideItem from "./AsideItems";
+import AsideDetail from "./AsideDetail";
 
-const AsideBox = ({ searchList }) => {
+const AsideBox = ({ LocationArr }) => {
+  const [getArray, setGetArray] = useState([]);
+  const [listData, setListData] = useState([]);
+  const [countArray, setCountArray] = useState([]);
+  const [listClick, setListClick] = useState(false);
+  const countFunc = (item) => {
+    let count = 0;
+    item.map((location) => {
+      count += +location.roomFilter.length;
+    });
+    return count;
+  };
+
+  useEffect(() => {
+    setGetArray(LocationArr);
+    setCountArray(countFunc(LocationArr));
+  }, [LocationArr]);
+
   return (
-    <Aside>
+    <Aside show={listClick}>
       <div className="aside-list-count">
-        <div className="aside-list-count-text">지역 목록 305개</div>
+        <div className="aside-list-count-text">
+          <img
+            src="https://s.zigbang.com/zigbang-www/_next/static/ic_actionbar_back_30x30_nor_black-43d95223e94f50b232d487e63c53d523.png"
+            width="30"
+            height="30"
+            onClick={() => setListClick(false)}
+          />
+          지역 목록
+          {countArray ? " " + countArray + "개" : ""}
+        </div>
         <div className="aside-list-change-unit"></div>
       </div>
       <div className="aside-list-box">
@@ -15,21 +42,22 @@ const AsideBox = ({ searchList }) => {
           <div className="recommend-info" />
         </div>
         <ul className="aside-list">
-          {/* {searchList.length > 0 &&
-            searchList.map((room) => {
-              return (
-                <AsideItem
-                  img={room.image}
-                  type={room.real_type}
-                  price={room.id}
-                  size={room.floorArea.p}
-                  address={room.sido}
-                  description={room.name}
-                />
-              );
-            })} */}
+          {getArray.length > 0 &&
+            getArray.map((location) => {
+              return location.roomFilter.map((room) => {
+                return (
+                  <AsideItem
+                    setListClick={setListClick}
+                    setListData={setListData}
+                    location={location}
+                    room={room}
+                  />
+                );
+              });
+            })}
         </ul>
       </div>
+      <AsideDetail listData={listData} listClick={listClick} />
     </Aside>
   );
 };
@@ -52,9 +80,21 @@ const Aside = styled.aside`
     height: 56px;
     padding: 0 10px 0 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    position: relative;
+
     &-text {
       font-size: 18px;
       color: #222222;
+      margin-left: ${(props) => (props.show ? "30px" : "7px")};
+      margin-top: 2px;
+      img {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        cursor: pointer;
+        transform: translateY(-50%);
+        display: ${(props) => (props.show ? "inline-block" : "none")};
+      }
     }
     .aside-list-change-unit {
       background-image: url("https://s.zigbang.com/zigbang-www/_next/static/ic_unit_change_30x30_nor_black-73e7307155b061dbcf282718af48cd5d.png");
@@ -66,6 +106,7 @@ const Aside = styled.aside`
   }
   .aside-list-box {
     overflow: auto;
+    display: ${(props) => (props.show ? "none" : "block")};
     height: calc(100% - 56px);
     .recommend-box {
       display: flex;
@@ -111,6 +152,21 @@ const Aside = styled.aside`
             color: #757575;
             font-weight: bold;
             margin-bottom: 2px;
+
+            .room-recommend-icon {
+              background-color: rgba(15, 157, 154, 0.1);
+              margin-right: 5px;
+              min-width: 25px;
+              padding-left: 4px;
+              padding-right: 4px;
+              padding-top: 1px;
+              color: rgb(15, 157, 154);
+              font-size: 9px;
+              line-height: 12px;
+              font-weight: bold;
+              display: inline;
+              border-radius: 2px;
+            }
           }
           .room-price {
             font-size: 18px;
