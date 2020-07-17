@@ -15,7 +15,6 @@ const Map = memo(({ inputValue, setSearchList }) => {
   const [schoolArr, setSchoolArr] = useState([]);
   const [num, setNum] = useState(1);
   const [markerArr, setMarkerArr] = useState([]);
-  const [overlayArr, setOverlayArr] = useState([]);
   const [clustererObj, setClustererObj] = useState({});
 
 
@@ -30,28 +29,23 @@ const Map = memo(({ inputValue, setSearchList }) => {
   };
 
   const getPublic = async () => {
-    const subwayData = await fetch(
-      "http://localhost:3000/data/subwayData.json"
-    );
+    const subwayData = await fetch('http://localhost:3000/data/subwayData.json');
     const subwayDataJSON = await subwayData.json();
     setSubwayArr(subwayDataJSON.subway);
-    const schoolData = await fetch(
-      "http://localhost:3000/data/schoolData.json"
-    );
+    const schoolData = await fetch('http://localhost:3000/data/schoolData.json');
     const schoolDataJSON = await schoolData.json();
     setSchoolArr(schoolDataJSON.school);
   };
 
   const createMap = () => {
-    const script = document.createElement("script");
+    const script = document.createElement('script');
     script.async = true;
-    script.src =
-      "https://dapi.kakao.com/v2/maps/sdk.js?appkey=76a449f1dae5315175afe4994035d80d&autoload=false&libraries=clusterer";
+    script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=76a449f1dae5315175afe4994035d80d&autoload=false&libraries=clusterer';
     document.head.appendChild(script);
     script.onload = () => {
       const { kakao } = window;
       kakao.maps.load(() => {
-        const container = window.document.getElementById("map"); //맵을 id가 map인 곳에 보여줍니다.
+        const container = window.document.getElementById('map'); //맵을 id가 map인 곳에 보여줍니다.
         const options = {
           center: new kakao.maps.LatLng(37.512672831662136, 127.06917351503958), //센터 좌표
           level: 4, //줌 레벨
@@ -72,16 +66,16 @@ const Map = memo(({ inputValue, setSearchList }) => {
     const extractArr = createMarker(LocationArr, map);
     setMarkerArr(extractArr);
     createClusterers(extractArr);
-    createCustomOverlay();
+    // createCustomOverlay();
   };
 
   const createClusterers = (markerArr) => {
     setClustererObj(createCluster(markerArr, map));
   };
 
-  const createCustomOverlay = () => {
-    setOverlayArr(createOverlay(LocationArr, map));
-  };
+  // const createCustomOverlay = () => {
+  //   setOverlayArr(createOverlay(LocationArr, map));
+  // };
 
   //컴디마일 때와 비슷
   useEffect(() => {
@@ -124,3 +118,4 @@ const KakaoMap = styled.div`
   position: absolute;
   bottom: 0;
 `;
+

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import FilterDropDown from "./FilterDropDown";
-import filterInputTextFunc from "./Functions/filterInputTextFunc";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import FilterDropDown from './FilterDropDown';
+import filterInputTextFunc from './Functions/filterInputTextFunc';
 
 const SearchBox = ({
   searchClick,
@@ -20,44 +20,38 @@ const SearchBox = ({
   parkingAllow,
   setParkingAllow,
 }) => {
-  const [typeMouseDown, setTypeMouseDown] = useState("");
+  const [typeMouseDown, setTypeMouseDown] = useState('');
   const [dropDownToggle, setDropDownToggle] = useState(false);
 
   return (
-    <Search
-      modalMouseDown={typeMouseDown === "모달"}
-      filterMouseDown={typeMouseDown === "필터"}
-    >
-      <div className="input-container">
-        <div className="input-box">
-          <input
-            placeholder="아파트, 지역, 지하철, 학교검색"
-            onChange={searchValue}
-          ></input>
-          <button onClick={searchClick} type="button" alt="검색" />
+    <Search modalMouseDown={typeMouseDown === '모달'} filterMouseDown={typeMouseDown === '필터'}>
+      <div className='input-container'>
+        <div className='input-box'>
+          <input placeholder='아파트, 지역, 지하철, 학교검색' onChange={searchValue}></input>
+          <button onClick={searchClick} type='button' alt='검색' />
         </div>
       </div>
-      <div className="filter-container">
+      <div className='filter-container'>
         <div
-          className="sale-types"
+          className='sale-types'
           onClick={() => setModalDisplayOn(true)}
-          onMouseDown={() => setTypeMouseDown("모달")}
-          onMouseUp={() => setTypeMouseDown("")}
-          onMouseLeave={() => setTypeMouseDown("")}
+          onMouseDown={() => setTypeMouseDown('모달')}
+          onMouseUp={() => setTypeMouseDown('')}
+          onMouseLeave={() => setTypeMouseDown('')}
         >
-          <div className="sale-types-text">{saleType}</div>
-          <div className="sale-types-img" />
+          <div className='sale-types-text'>{saleType}</div>
+          <div className='sale-types-img' />
         </div>
         <div
-          className="filter-box"
+          className='filter-box'
           onClick={() => {
             setDropDownToggle(true);
           }}
-          onMouseDown={() => setTypeMouseDown("필터")}
-          onMouseUp={() => setTypeMouseDown("")}
-          onMouseLeave={() => setTypeMouseDown("")}
+          onMouseDown={() => setTypeMouseDown('필터')}
+          onMouseUp={() => setTypeMouseDown('')}
+          onMouseLeave={() => setTypeMouseDown('')}
         >
-          <div className="filter-input">
+          <div className='filter-input'>
             <div>
               {filterInputTextFunc(
                 depositRange[saleType],
@@ -68,13 +62,13 @@ const SearchBox = ({
               )}
             </div>
           </div>
-          <div className="filter-btn">
-            <div className="filter-btn-img"></div>
-            <div className="filter-btn-text">필터</div>
+          <div className='filter-btn'>
+            <div className='filter-btn-img'></div>
+            <div className='filter-btn-text'>필터</div>
           </div>
         </div>
       </div>
-      {["전체", "전세", "월세"].map((val, idx) => {
+      {['전체', '전세', '월세'].map((val, idx) => {
         return (
           <FilterDropDown
             key={idx}
@@ -133,8 +127,7 @@ const Search = styled.div`
         height: 28px;
         border: none;
         outline: none;
-        background: url("https://s.zigbang.com/www/images/ic_title_searchbar_30x30_nor_white.png")
-          center center / 100% no-repeat transparent;
+        background: url('https://s.zigbang.com/www/images/ic_title_searchbar_30x30_nor_white.png') center center / 100% no-repeat transparent;
         background-color: rgb(250, 136, 11);
         cursor: pointer;
       }
@@ -156,8 +149,7 @@ const Search = styled.div`
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      background-color: ${(props) =>
-        props.modalMouseDown ? "rgba(0,0,0,0.1)" : "white"};
+      background-color: ${(props) => (props.modalMouseDown ? 'rgba(0,0,0,0.1)' : 'white')};
 
       &-text {
         position: relative;
@@ -169,7 +161,7 @@ const Search = styled.div`
       }
 
       &-img {
-        background-image: url("https://s.zigbang.com/zigbang-www/_next/static/ic_btn_arrow_open_18x18_nor_black-20dd6c412a723f182ebf9d7209b4487d.png");
+        background-image: url('https://s.zigbang.com/zigbang-www/_next/static/ic_btn_arrow_open_18x18_nor_black-20dd6c412a723f182ebf9d7209b4487d.png');
         background-size: cover;
         width: 18px;
         height: 18px;
@@ -178,8 +170,7 @@ const Search = styled.div`
     .filter-box {
       display: flex;
       cursor: pointer;
-      background-color: ${(props) =>
-        props.filterMouseDown ? "rgba(0,0,0,0.1)" : "white"};
+      background-color: ${(props) => (props.filterMouseDown ? 'rgba(0,0,0,0.1)' : 'white')};
       .filter-input {
         color: #222222;
         font-size: 13px;
@@ -208,7 +199,7 @@ const Search = styled.div`
         border: 1px solid rgb(68, 68, 68);
 
         &-img {
-          background-image: url("https://s.zigbang.com/zigbang-www/_next/static/ic_btn_filter_18x18_nor_black-a5e09876a82fb5417126fcdbad01555c.png");
+          background-image: url('https://s.zigbang.com/zigbang-www/_next/static/ic_btn_filter_18x18_nor_black-a5e09876a82fb5417126fcdbad01555c.png');
           background-size: cover;
           width: 20px;
           height: 20px;
