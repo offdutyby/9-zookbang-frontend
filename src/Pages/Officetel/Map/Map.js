@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import styled from "styled-components";
 import AsideBox from "../AsideBox";
 import ZoomController from "./ZoomController";
@@ -9,6 +9,7 @@ import createOverlay from "./Functions/createOverlay";
 import createCluster from "./Functions/createCluster";
 import createMarker from "./Functions/createMarker";
 import filterLocation from "./Functions/Filter";
+import { API_URL } from "../../../config";
 
 const Map = ({
   inputValue,
@@ -33,8 +34,7 @@ const Map = ({
 
   const getLocation = async (lng, lat, saleType, depositRange) => {
     const data = await fetch(
-      // "http://localhost:3000/data/mapData1.json"
-      `http://10.58.4.33:8000/studio-flat/map?longitude=${lat}&latitude=${lng}`
+      `${API_URL}/studio-flat/map?longitude=${lat}&latitude=${lng}`
     );
     const dataJSON = await data.json();
     // setLocationArr(dataJSON.result);
@@ -84,7 +84,7 @@ const Map = ({
         const container = window.document.getElementById("map"); //맵을 id가 map인 곳에 보여줍니다.
         const options = {
           center: new kakao.maps.LatLng(37.512672831662136, 127.06917351503958), //센터 좌표
-          level: 7, //줌 레벨
+          level: 4, //줌 레벨
         };
         const Map = new kakao.maps.Map(container, options); //맵 생성
         setMap(Map);
