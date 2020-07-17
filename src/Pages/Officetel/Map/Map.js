@@ -15,7 +15,6 @@ const Map = memo(({ inputValue, setSearchList }) => {
   const [schoolArr, setSchoolArr] = useState([]);
   const [num, setNum] = useState(1);
   const [markerArr, setMarkerArr] = useState([]);
-  const [overlayArr, setOverlayArr] = useState([]);
   const [clustererObj, setClustererObj] = useState({});
 
 
@@ -72,16 +71,16 @@ const Map = memo(({ inputValue, setSearchList }) => {
     const extractArr = createMarker(LocationArr, map);
     setMarkerArr(extractArr);
     createClusterers(extractArr);
-    createCustomOverlay();
+    // createCustomOverlay();
   };
 
   const createClusterers = (markerArr) => {
     setClustererObj(createCluster(markerArr, map));
   };
 
-  const createCustomOverlay = () => {
-    setOverlayArr(createOverlay(LocationArr, map));
-  };
+  // const createCustomOverlay = () => {
+  //   setOverlayArr(createOverlay(LocationArr, map));
+  // };
 
   //컴디마일 때와 비슷
   useEffect(() => {
@@ -124,3 +123,4 @@ const KakaoMap = styled.div`
   position: absolute;
   bottom: 0;
 `;
+
