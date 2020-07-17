@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import FilterDropDown from "./FilterDropDown";
-import filterInputTextFunc from "./Functions/filterInputTextFunc";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import FilterDropDown from './FilterDropDown';
+import filterInputTextFunc from './Functions/filterInputTextFunc';
 
 const SearchBox = ({
   searchClick,
@@ -51,13 +51,7 @@ const SearchBox = ({
           onMouseUp={() => setTypeMouseDown('')}
           onMouseLeave={() => setTypeMouseDown('')}
         >
-<<<<<<< HEAD
-          <div className='filter-input'>검색 조건을 설정해주세요.</div>
-          <div className='filter-btn'>
-            <div className='filter-btn-img'></div>
-            <div className='filter-btn-text'>필터</div>
-=======
-          <div className="filter-input">
+          <div className='filter-input'>
             <div>
               {filterInputTextFunc(
                 depositRange[saleType],
@@ -68,10 +62,9 @@ const SearchBox = ({
               )}
             </div>
           </div>
-          <div className="filter-btn">
-            <div className="filter-btn-img"></div>
-            <div className="filter-btn-text">필터</div>
->>>>>>> master
+          <div className='filter-btn'>
+            <div className='filter-btn-img'></div>
+            <div className='filter-btn-text'>필터</div>
           </div>
         </div>
       </div>
